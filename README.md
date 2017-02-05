@@ -1,2 +1,2 @@
 # College-Work
-Contains prorams of the courses gone through in college.
+Contains programs of the courses gone through in college.
