@@ -1,0 +1,20 @@
+org 0
+	
+	;Initializiing a and dptr
+	mov a,#22H
+	mov dptr,#2FFFH
+	
+	movx @dptr,a ; Writing to external memory
+	
+	movx a,@dptr ; Reading from external memory
+	
+	cjne a,#21H,fail
+	
+	success:			;If data is successfully read
+		mov p1,a
+		jmp success
+		
+		fail:			;If data read faliure
+			mov p1,#00H
+			jmp fail
+end

@@ -1,0 +1,1067 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+Eandgate
+Z0 w1458205169
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dF:/programs/VHDL Codes
+Z4 8F:/programs/VHDL Codes/ANDgate.vhdl
+Z5 FF:/programs/VHDL Codes/ANDgate.vhdl
+l0
+L4
+VK:5g>AEVm@2_BMPlgad2T1
+!s100 zi<`BE6CH15mEbLW]O2RV3
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1459414100
+!i10b 1
+Z8 !s108 1459414100.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/ANDgate.vhdl|
+Z10 !s107 F:/programs/VHDL Codes/ANDgate.vhdl|
+!i113 1
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+Afunc
+R1
+R2
+DEx4 work 7 andgate 0 22 K:5g>AEVm@2_BMPlgad2T1
+l10
+L9
+VFMgTBYDg3?Jf0@i^lYjZb2
+!s100 9>Qo9lOEF4X]NC5EeOFN;2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eandusingorandnot
+Z13 w1457601461
+R1
+R2
+R3
+Z14 8F:/programs/VHDL Codes/and using or and not.vhdl
+Z15 FF:/programs/VHDL Codes/and using or and not.vhdl
+l0
+L4
+VT[]HgZQiDYE`_mh9W]_kG0
+!s100 CcDeVoFB:WDSk9PFOPB^K0
+R6
+32
+Z16 !s110 1459414101
+!i10b 1
+Z17 !s108 1459414101.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/and using or and not.vhdl|
+Z19 !s107 F:/programs/VHDL Codes/and using or and not.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 16 andusingorandnot 0 22 T[]HgZQiDYE`_mh9W]_kG0
+l23
+L9
+VBNa[Lb_^205YZGF<D[Xfc2
+!s100 ^dN1=Nl6:WgaYX691XAm=0
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Ecarrylookaheadadder8bit
+Z20 w1462044505
+R1
+R2
+R3
+Z21 8F:/programs/VHDL Codes/CarryLookAheadAdder8bit.vhdl
+Z22 FF:/programs/VHDL Codes/CarryLookAheadAdder8bit.vhdl
+l0
+L4
+Vo5BDVzd4]kn6QD?OB@fGD1
+!s100 Ca@dBU5jVE65Q_dojnMZ90
+R6
+32
+Z23 !s110 1462044509
+!i10b 1
+Z24 !s108 1462044509.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/CarryLookAheadAdder8bit.vhdl|
+Z26 !s107 F:/programs/VHDL Codes/CarryLookAheadAdder8bit.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 23 carrylookaheadadder8bit 0 22 o5BDVzd4]kn6QD?OB@fGD1
+l13
+L11
+VI;4zOc6D]Rl?hZGncUd[Y1
+!s100 NRZcB8QzWoS]4H`h]8CiS2
+R6
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Edecoder3x8
+Z27 w1461932103
+R1
+R2
+R3
+Z28 8F:/programs/VHDL Codes/3x8Decoder.vhdl
+Z29 FF:/programs/VHDL Codes/3x8Decoder.vhdl
+l0
+L4
+VSQkZf0OFJBJ3ZY:C0YOdX3
+!s100 oKY?_nV@L>k18KVM@eB?L1
+R6
+32
+Z30 !s110 1461932106
+!i10b 1
+Z31 !s108 1461932106.000000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/3x8Decoder.vhdl|
+Z33 !s107 F:/programs/VHDL Codes/3x8Decoder.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 10 decoder3x8 0 22 SQkZf0OFJBJ3ZY:C0YOdX3
+l10
+L9
+VgPCE@0BjA]]m[7XkfW9Xj2
+!s100 z1:?<`o1V]43L86Zk^lHd2
+R6
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R11
+R12
+Edflipflop
+Z34 w1462433578
+R1
+R2
+R3
+Z35 8F:/programs/VHDL Codes/DFlipFlop.vhdl
+Z36 FF:/programs/VHDL Codes/DFlipFlop.vhdl
+l0
+L4
+V2[oV6^=W4bRULZBa;[XGl2
+!s100 Tb_`NcUN<MTLC3?08SzK;0
+R6
+32
+Z37 !s110 1462433583
+!i10b 1
+Z38 !s108 1462433583.000000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/DFlipFlop.vhdl|
+Z40 !s107 F:/programs/VHDL Codes/DFlipFlop.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 9 dflipflop 0 22 2[oV6^=W4bRULZBa;[XGl2
+l10
+L9
+V]I:mjWTz230e^f=n^U24n2
+!s100 `dNHLCRDIZ0]Ugh=H31[>0
+R6
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R11
+R12
+Edtojkflipflop
+Z41 w1462102668
+R1
+R2
+R3
+Z42 8F:/programs/VHDL Codes/DToJKFlipFlop.vhdl
+Z43 FF:/programs/VHDL Codes/DToJKFlipFlop.vhdl
+l0
+L4
+Vk7hbI0AzB:MGglR79_1Ij0
+!s100 U7bl26o>lG9d0XBa9l^X93
+R6
+32
+Z44 !s110 1462102673
+!i10b 1
+Z45 !s108 1462102672.000000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/DToJKFlipFlop.vhdl|
+Z47 !s107 F:/programs/VHDL Codes/DToJKFlipFlop.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 13 dtojkflipflop 0 22 k7hbI0AzB:MGglR79_1Ij0
+l34
+L9
+VN5bdcgmBl>=ClRJ]ogFU53
+!s100 zEW:<BbFSVh6VLi0PS6El2
+R6
+32
+R44
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R11
+R12
+Eencoder8x3
+Z48 w1461946058
+R1
+R2
+R3
+Z49 8F:/programs/VHDL Codes/8x3Encoder.vhdl
+Z50 FF:/programs/VHDL Codes/8x3Encoder.vhdl
+l0
+L4
+VM:`BVTjlX3`0:0]Y0`gFe3
+!s100 :9=AzNUzklzF=Ie[U<6S83
+R6
+32
+Z51 !s110 1461946062
+!i10b 1
+Z52 !s108 1461946062.000000
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/8x3Encoder.vhdl|
+Z54 !s107 F:/programs/VHDL Codes/8x3Encoder.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 10 encoder8x3 0 22 M:`BVTjlX3`0:0]Y0`gFe3
+l10
+L9
+V:>FMz<@fBK8>N4j71Aa9P3
+!s100 T]?aB^LLXKVS8znT]YceK2
+R6
+32
+R51
+!i10b 1
+R52
+R53
+R54
+!i113 1
+R11
+R12
+Efourbitparalleladder
+Z55 w1462009825
+R1
+R2
+R3
+Z56 8F:/programs/VHDL Codes/4BitParallelAdderUsing4FullAdder.vhdl
+Z57 FF:/programs/VHDL Codes/4BitParallelAdderUsing4FullAdder.vhdl
+l0
+L4
+VmKMgjBCoWZW1k[NQEflPW3
+!s100 ^FMZZ0AaW2[6jc02`6cnn3
+R6
+32
+Z58 !s110 1462009834
+!i10b 1
+Z59 !s108 1462009834.000000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/4BitParallelAdderUsing4FullAdder.vhdl|
+Z61 !s107 F:/programs/VHDL Codes/4BitParallelAdderUsing4FullAdder.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 20 fourbitparalleladder 0 22 mKMgjBCoWZW1k[NQEflPW3
+l18
+L9
+VV2H6B[gmOVY4NoKk:h[PA2
+!s100 ia9z>l_dncV1K227DWUmk3
+R6
+32
+R58
+!i10b 1
+R59
+R60
+R61
+!i113 1
+R11
+R12
+Efulladder
+Z62 w1457599052
+R1
+R2
+R3
+Z63 8F:/programs/VHDL Codes/FullAdder.vhdl
+Z64 FF:/programs/VHDL Codes/FullAdder.vhdl
+l0
+L4
+V_R1<SR[0oJ=RDG1N`<=nI0
+!s100 V78[heVTaR[gASNETV[;I0
+R6
+32
+R16
+!i10b 1
+R17
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/FullAdder.vhdl|
+Z66 !s107 F:/programs/VHDL Codes/FullAdder.vhdl|
+!i113 1
+R11
+R12
+Afulladder
+R1
+R2
+DEx4 work 9 fulladder 0 22 _R1<SR[0oJ=RDG1N`<=nI0
+l23
+L9
+VF8ZRa1MAV<IhM_Y_S1fe>1
+!s100 ?nLOIeC6T?kgFdN0XomI83
+R6
+32
+R16
+!i10b 1
+R17
+R65
+R66
+!i113 1
+R11
+R12
+Ehalfadder
+Z67 w1457598970
+R1
+R2
+R3
+Z68 8F:/programs/VHDL Codes/HalfAdder.vhdl
+Z69 FF:/programs/VHDL Codes/HalfAdder.vhdl
+l0
+L4
+VgFnE46f[ZF=z:Yk1QaX0P3
+!s100 HXYG_nkf?JnW8Tj_f8lkN2
+R6
+32
+R16
+!i10b 1
+R17
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/HalfAdder.vhdl|
+Z71 !s107 F:/programs/VHDL Codes/HalfAdder.vhdl|
+!i113 1
+R11
+R12
+Ahalfadder
+R1
+R2
+DEx4 work 9 halfadder 0 22 gFnE46f[ZF=z:Yk1QaX0P3
+l21
+L9
+VJ8^G:BBK@ZXQ=YeCT;>zg2
+!s100 _M5HOoMXa3bhk:BJIlT_71
+R6
+32
+R16
+!i10b 1
+R17
+R70
+R71
+!i113 1
+R11
+R12
+Ejkflipflop
+Z72 w1462013216
+R1
+R2
+R3
+Z73 8F:/programs/VHDL Codes/JKFlipFLop.vhdl
+Z74 FF:/programs/VHDL Codes/JKFlipFLop.vhdl
+l0
+L4
+VjPC4<oME6zm@R]<JmS7^63
+!s100 ed:`f2DmHjV`R7PRMf;YC1
+R6
+32
+Z75 !s110 1462013222
+!i10b 1
+Z76 !s108 1462013222.000000
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/JKFlipFLop.vhdl|
+Z78 !s107 F:/programs/VHDL Codes/JKFlipFLop.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 10 jkflipflop 0 22 jPC4<oME6zm@R]<JmS7^63
+l10
+L9
+VeTe;UR^;[l`ULafIXnU<E0
+!s100 0BjMc4<`6L?`0aOCHc0Iz3
+R6
+32
+R75
+!i10b 1
+R76
+R77
+R78
+!i113 1
+R11
+R12
+Ejktosrflipflop
+Z79 w1462099724
+R1
+R2
+R3
+Z80 8F:/programs/VHDL Codes/JKToSRFlipFlop.vhdl
+Z81 FF:/programs/VHDL Codes/JKToSRFlipFlop.vhdl
+l0
+L4
+VQkj?QBZb=jEUMkem:[45O3
+!s100 ki[@dD7IWG0iE8FW1Hno32
+R6
+32
+Z82 !s110 1462100606
+!i10b 1
+Z83 !s108 1462100606.000000
+Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/JKToSRFlipFlop.vhdl|
+Z85 !s107 F:/programs/VHDL Codes/JKToSRFlipFlop.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 14 jktosrflipflop 0 22 Qkj?QBZb=jEUMkem:[45O3
+l16
+L9
+Vo7:BF?TO66DSn`HBz94QJ1
+!s100 _FM7o3KW]=<X_D75NgGeo0
+R6
+32
+R82
+!i10b 1
+R83
+R84
+R85
+!i113 1
+R11
+R12
+Emodupsequenceupto13
+Z86 w1462015358
+Z87 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z88 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R1
+R2
+R3
+Z89 8F:/programs/VHDL Codes/ModUpSequenceUpto13.vhdl
+Z90 FF:/programs/VHDL Codes/ModUpSequenceUpto13.vhdl
+l0
+L5
+Vj`6^Y9JZhg<oBmb_9Oc=`0
+!s100 155j>WBPhFcDmMe^VF1[90
+R6
+32
+Z91 !s110 1462015364
+!i10b 1
+Z92 !s108 1462015364.000000
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/ModUpSequenceUpto13.vhdl|
+Z94 !s107 F:/programs/VHDL Codes/ModUpSequenceUpto13.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R87
+R88
+R1
+R2
+DEx4 work 19 modupsequenceupto13 0 22 j`6^Y9JZhg<oBmb_9Oc=`0
+l12
+L11
+VRC?kVN9dgMao?:;IS@m?X0
+!s100 ^S34Y7KPSVQA=6`<20Sjn1
+R6
+32
+R91
+!i10b 1
+R92
+R93
+R94
+!i113 1
+R11
+R12
+Emux2x1
+Z95 w1461927076
+R1
+R2
+R3
+Z96 8F:/programs/VHDL Codes/2x1Mux.vhdl
+Z97 FF:/programs/VHDL Codes/2x1Mux.vhdl
+l0
+L4
+V_=ECBShZ8TQZ5f`JMNG032
+!s100 @0ER6K<k:m=PbJGZgXFhH1
+R6
+32
+Z98 !s110 1461927402
+!i10b 1
+Z99 !s108 1461927402.000000
+Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/2x1Mux.vhdl|
+Z101 !s107 F:/programs/VHDL Codes/2x1Mux.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 6 mux2x1 0 22 _=ECBShZ8TQZ5f`JMNG032
+l11
+L10
+VCZ^74LE35ORVTcYKS@64B3
+!s100 =LXYNM?YFfba1;KoZ_ER`2
+R6
+32
+R98
+!i10b 1
+R99
+R100
+R101
+!i113 1
+R11
+R12
+Emux2x1usingandornot
+Z102 w1459415104
+R1
+R2
+R3
+Z103 8F:/programs/VHDL Codes/2x1MuxUsingAndOrNot.vhdl
+Z104 FF:/programs/VHDL Codes/2x1MuxUsingAndOrNot.vhdl
+l0
+L4
+VI?Hji:caZE3O?Jz>7OO=02
+!s100 ]okhknW]h[HAOz8]YOVaX2
+R6
+32
+Z105 !s110 1459415110
+!i10b 1
+Z106 !s108 1459415110.000000
+Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/2x1MuxUsingAndOrNot.vhdl|
+Z108 !s107 F:/programs/VHDL Codes/2x1MuxUsingAndOrNot.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 19 mux2x1usingandornot 0 22 I?Hji:caZE3O?Jz>7OO=02
+l28
+L9
+V7_@gLR`1lA^g]<4g5PJSO1
+!s100 DY[_njdcD=FnGVWjLcelc1
+R6
+32
+R105
+!i10b 1
+R106
+R107
+R108
+!i113 1
+R11
+R12
+Emux4x1using2x1
+Z109 w1462008796
+R1
+R2
+R3
+Z110 8F:/programs/VHDL Codes/4x1Using2x1.vhdl
+Z111 FF:/programs/VHDL Codes/4x1Using2x1.vhdl
+l0
+L4
+V?H6gE0zZ`0nIXSYoBi5iT1
+!s100 O2JD3]83eHGC4^7<Z>0H11
+R6
+32
+Z112 !s110 1462008807
+!i10b 1
+Z113 !s108 1462008807.000000
+Z114 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/4x1Using2x1.vhdl|
+Z115 !s107 F:/programs/VHDL Codes/4x1Using2x1.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 14 mux4x1using2x1 0 22 ?H6gE0zZ`0nIXSYoBi5iT1
+l20
+L10
+VL_=B`3`?NKn9OaELM80jb3
+!s100 ML<AN=KAaGXK?mLCU79jl3
+R6
+32
+R112
+!i10b 1
+R113
+R114
+R115
+!i113 1
+R11
+R12
+Emux4x1using2x1mux
+Z116 w1459415759
+R1
+R2
+R3
+Z117 8F:/programs/VHDL Codes/4x1MuxUsing2x1Mux.vhdl
+Z118 FF:/programs/VHDL Codes/4x1MuxUsing2x1Mux.vhdl
+l0
+L4
+VALbQHYEJi7V?LMYkJk:6K0
+!s100 g[;UI7WcCTSdMmWCeNnBO0
+R6
+32
+Z119 !s110 1459415778
+!i10b 1
+Z120 !s108 1459415777.000000
+Z121 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/4x1MuxUsing2x1Mux.vhdl|
+Z122 !s107 F:/programs/VHDL Codes/4x1MuxUsing2x1Mux.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 17 mux4x1using2x1mux 0 22 ALbQHYEJi7V?LMYkJk:6K0
+l18
+L9
+V2ZY]F>5ZEjXm`gGzb7O9B1
+!s100 eC:V6o5hmJMSWI2f6P^Ol2
+R6
+32
+R119
+!i10b 1
+R120
+R121
+R122
+!i113 1
+R11
+R12
+Emuxusingandornot
+Z123 w1459414092
+R1
+R2
+R3
+R103
+R104
+l0
+L4
+V`Lg6Zc5HzhWlJ6mzbcZeI1
+!s100 gE6[3QIT;md?ie3<@TnJE0
+R6
+32
+Z124 !s110 1459414103
+!i10b 1
+Z125 !s108 1459414102.000000
+R107
+R108
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 16 muxusingandornot 0 22 `Lg6Zc5HzhWlJ6mzbcZeI1
+l28
+L9
+VNmej7C>Az5SJ]I`HRhNZk2
+!s100 SJjV7Z2Pz^zajBQXG?jk<0
+R6
+32
+R124
+!i10b 1
+R125
+R107
+R108
+!i113 1
+R11
+R12
+Enandusingandandnot
+Z126 w1458205179
+R1
+R2
+R3
+Z127 8F:/programs/VHDL Codes/NAND using And and Not.vhdl
+Z128 FF:/programs/VHDL Codes/NAND using And and Not.vhdl
+l0
+L4
+VUdZU4l5SOQC6>O5UDz8O52
+!s100 b?_HF7RNR^Lhbl?zc9DOT0
+R6
+32
+Z129 !s110 1459414102
+!i10b 1
+R125
+Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/NAND using And and Not.vhdl|
+Z131 !s107 F:/programs/VHDL Codes/NAND using And and Not.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 18 nandusingandandnot 0 22 UdZU4l5SOQC6>O5UDz8O52
+l23
+L9
+VQ><>>dS`n@Y<AKB6ZJ]9b2
+!s100 d=G``PhW=TgR>_>9<azGN2
+R6
+32
+R129
+!i10b 1
+R125
+R130
+R131
+!i113 1
+R11
+R12
+Enorusingorandnot
+Z132 w1458205516
+R1
+R2
+R3
+Z133 8F:/programs/VHDL Codes/NOR_using_or_and_not.vhdl
+Z134 FF:/programs/VHDL Codes/NOR_using_or_and_not.vhdl
+l0
+L4
+V2iWKY0O9?0oh@DhKMOe^U0
+!s100 YL?m37lX_5KzkJ;JVlS`c1
+R6
+32
+R129
+!i10b 1
+R125
+Z135 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/NOR_using_or_and_not.vhdl|
+Z136 !s107 F:/programs/VHDL Codes/NOR_using_or_and_not.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 16 norusingorandnot 0 22 2iWKY0O9?0oh@DhKMOe^U0
+l23
+L9
+V3MM0dFEJXFHHX^QSd8`QY1
+!s100 ?a^@bO9;1[[9d9<ClVGc^2
+R6
+32
+R129
+!i10b 1
+R125
+R135
+R136
+!i113 1
+R11
+R12
+Enotgate
+Z137 w1457600375
+R1
+R2
+R3
+Z138 8F:/programs/VHDL Codes/NOTgate.vhdl
+Z139 FF:/programs/VHDL Codes/NOTgate.vhdl
+l0
+L4
+VclF:PSHI8DM]h6z2Lfg1@3
+!s100 >dbTc8ZWHJeWc_2;Okhha1
+R6
+32
+R16
+!i10b 1
+R17
+Z140 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/NOTgate.vhdl|
+Z141 !s107 F:/programs/VHDL Codes/NOTgate.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 7 notgate 0 22 clF:PSHI8DM]h6z2Lfg1@3
+l10
+L9
+VgA4mZ=F>^YcRDN9Nb3?eN0
+!s100 9=292kdKi_bX2dghY`oUh0
+R6
+32
+R16
+!i10b 1
+R17
+R140
+R141
+!i113 1
+R11
+R12
+Eorgate
+Z142 w1453367878
+R1
+R2
+R3
+Z143 8F:/programs/VHDL Codes/ORgate.vhdl
+Z144 FF:/programs/VHDL Codes/ORgate.vhdl
+l0
+L4
+VFlEj:LSgA<FlGXPLm=TZG1
+!s100 YGoUK2mK[Lg_dW5g@=ll40
+R6
+32
+R7
+!i10b 1
+R8
+Z145 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/ORgate.vhdl|
+Z146 !s107 F:/programs/VHDL Codes/ORgate.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 6 orgate 0 22 FlEj:LSgA<FlGXPLm=TZG1
+l11
+L10
+V^3MozE3LYcIa@4oilLZ<41
+!s100 iRR0[Z4mJ>028Lgl=1UL^3
+R6
+32
+R7
+!i10b 1
+R8
+R145
+R146
+!i113 1
+R11
+R12
+Esiporegisterusingdff
+Z147 w1462434925
+R1
+R2
+R3
+Z148 8F:/programs/VHDL Codes/SIPORegisterUsingDFF.vhdl
+Z149 FF:/programs/VHDL Codes/SIPORegisterUsingDFF.vhdl
+l0
+L4
+VZaz3:7BC89`>B@AQngD8D1
+!s100 FEAVK1TQiRc`I`89RPXd51
+R6
+32
+Z150 !s110 1462434931
+!i10b 1
+Z151 !s108 1462434931.000000
+Z152 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/SIPORegisterUsingDFF.vhdl|
+Z153 !s107 F:/programs/VHDL Codes/SIPORegisterUsingDFF.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 20 siporegisterusingdff 0 22 Zaz3:7BC89`>B@AQngD8D1
+l19
+L9
+Vm=9l2I;m[`UbBoPa^I[S12
+!s100 llV>]jo[jIkDLbI5z:OS33
+R6
+32
+R150
+!i10b 1
+R151
+R152
+R153
+!i113 1
+R11
+R12
+Esrflipflop
+Z154 w1462099627
+R1
+R2
+R3
+R80
+R81
+l0
+L4
+VD;aoEBRQX8Ed>Bjcdc9_=2
+!s100 ;3X[?HzfP>f@?_;Heif<V3
+R6
+32
+!s110 1462099632
+!i10b 1
+Z155 !s108 1462099632.000000
+R84
+R85
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 10 srflipflop 0 22 D;aoEBRQX8Ed>Bjcdc9_=2
+l16
+L9
+V6mEi]MEIF5NOS4QW?`dOi3
+!s100 T754dOz67bh3gKGJd6ImL2
+R6
+32
+!s110 1462099633
+!i10b 1
+R155
+R84
+R85
+!i113 1
+R11
+R12
+Etflipflop
+Z156 w1462082558
+R1
+R2
+R3
+Z157 8F:/programs/VHDL Codes/TFlipFlop.vhdl
+Z158 FF:/programs/VHDL Codes/TFlipFlop.vhdl
+l0
+L4
+VMnDED7iH6hXRk5QUYbM<i2
+!s100 <^jfVQdE2jM;0I^KAO7ih0
+R6
+32
+Z159 !s110 1462082567
+!i10b 1
+Z160 !s108 1462082567.000000
+Z161 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/TFlipFlop.vhdl|
+Z162 !s107 F:/programs/VHDL Codes/TFlipFlop.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 9 tflipflop 0 22 MnDED7iH6hXRk5QUYbM<i2
+l10
+L9
+V>P@a91ZaV1RkY1mXfgeaN2
+!s100 D]QaRT7G@U2c3_8=oio=e1
+R6
+32
+R159
+!i10b 1
+R160
+R161
+R162
+!i113 1
+R11
+R12
+Exorgate
+Z163 w1453369206
+R1
+R2
+R3
+Z164 8F:/programs/VHDL Codes/XORgate.vhdl
+Z165 FF:/programs/VHDL Codes/XORgate.vhdl
+l0
+L4
+V[ifJD^fV]5?MZBnF<OIdn2
+!s100 ncj3DL9Fj@XMJGCi;gI2C3
+R6
+32
+R16
+!i10b 1
+R8
+Z166 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/XORgate.vhdl|
+Z167 !s107 F:/programs/VHDL Codes/XORgate.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 7 xorgate 0 22 [ifJD^fV]5?MZBnF<OIdn2
+l10
+L9
+VAgN7V2;0EH3VBE020gK9i0
+!s100 66G`iE>a<lKE>G`djW4LY1
+R6
+32
+R16
+!i10b 1
+R8
+R166
+R167
+!i113 1
+R11
+R12
+Exorusingandandnot
+Z168 w1458204325
+R1
+R2
+R3
+Z169 8F:/programs/VHDL Codes/xor using and and not.vhdl
+Z170 FF:/programs/VHDL Codes/xor using and and not.vhdl
+l0
+L4
+V=om3i<o70QP]I<k^=V[[b0
+!s100 Nmn<73z@=[9I13>Ed[:>@1
+R6
+32
+R129
+!i10b 1
+R17
+Z171 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/programs/VHDL Codes/xor using and and not.vhdl|
+Z172 !s107 F:/programs/VHDL Codes/xor using and and not.vhdl|
+!i113 1
+R11
+R12
+Afunc
+R1
+R2
+DEx4 work 17 xorusingandandnot 0 22 =om3i<o70QP]I<k^=V[[b0
+l23
+L9
+VQKP3agJ:<hm7[XMNMTb<J2
+!s100 GNhQSJR[?E?c1De>WCKWI3
+R6
+32
+R129
+!i10b 1
+R17
+R171
+R172
+!i113 1
+R11
+R12

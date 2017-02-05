@@ -1,0 +1,31 @@
+org 0
+	mov a,#0FEH
+	
+	start:
+		mov p1,a
+		acall delay
+		
+		jz reset
+		
+		mov r2,p1
+		add a,r2
+		sjmp start
+		
+	delay:
+		mov r0,#250D
+		mov r1,#250D
+		loop1: 
+			loop2:
+				djnz r1,loop2
+				djnz r0,loop1
+		reti
+		
+		reset:
+			mov p1,#001H
+			
+			sjmp start
+			
+			
+		
+end
+	

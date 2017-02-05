@@ -1,0 +1,36 @@
+;Crytal freq = 11.059 MHz
+;Machine freq = 11.059/12
+;Machine cycle time  = 12/11.059 = 1.085 us
+;1KHz square wave genaration using 2 timers
+;500/1.085 = 461
+;65535-461 = 65074
+; Put the hex of this value in the timer, FE32
+
+org 0000H
+	setb p1.0
+	mov TMOD,#00010001B
+	main:
+	cpl p1.0
+	acall delay1
+	cpl p1.0
+	acall delay2
+	sjmp main
+	
+	delay1:            ;for 500 us : for on
+		mov th0,#0FEH  ;lower bits of t0
+		mov tl0,#032H  ;higher bits of t0
+		setb tr0       ;timer run
+		here1: jnb tf0, here1     ;tf0: flag overflow of timer0
+		clr tr0
+		clr tf0
+		ret
+	
+	delay2:            ;for 500us : for off
+		mov th1,#0FEH
+		mov tl1,#032H
+		setb tr1
+		here2: jnb tf1, here2
+		clr tr1
+		clr tf1
+		ret
+end

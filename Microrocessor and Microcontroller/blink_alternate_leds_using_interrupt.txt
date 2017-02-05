@@ -1,0 +1,49 @@
+org 0
+	;mov a,#01H
+	;cpl a
+	;mov P1,a
+	clr p1.0
+	setb p1.1
+	acall main
+	
+org 0013H
+	setb p1.0
+	cpl p1.1
+	
+	mov r0,#100D
+	mov r1,#100D
+	loop4:
+		loop5:
+			djnz r1,loop5
+		djnz r0,loop4
+	
+	reti
+	
+main:
+	mov ie,#10000100B
+
+	;setb TCON.2  -for edge-triggered
+	
+	setb p1.1
+	acall delay1
+	cpl p1.0
+	jmp main
+	
+delay1: mov r5, #125D
+	; label is 4ms delay
+	label: 
+		acall delay
+		
+		djnz r5, label
+	reti
+		
+delay: 	
+	mov r0, #100D
+	mov r1, #100D
+	loop1: 
+		djnz r0, loop1
+	loop2: 
+		djnz r1, loop2
+	reti
+	
+end	
