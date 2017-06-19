@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="test" basedir="." default="main" >
+	<target name="compile" >
+		<echo message="COMPILE!!!!!!!!!" />
+		<mkdir dir="class" />
+		<javac includeantruntime="false" srcdir="." destdir="class" />
+	</target>
+
+	<target name="main" depends="compile" >
+		<echo message="MAIN!!!!!!!!!" />
+		<java classname="test" >
+			<classpath path="class" />
+		</java>
+	</target>
+
+	<target name="clean" >
+		<echo message="CLEAN!!!!!!!!!" />
+		<delete dir="class" />
+		<delete dir="copied" />
+	</target>
+
+	<target name="copy">
+		<echo message="COPY!!!!!!!!!" />
+		<mkdir dir="copied" />
+		<copy todir="copied">
+			<fileset file="test.java" />
+		</copy>
+	</target>
+
+</project>

@@ -1,0 +1,344 @@
+This was the gdb output of the program without errors. 
+
+
+niit@niit-OptiPlex-3020:~/Desktop/exam$ gcc -g -o U101114FCS203 U101114FCS203.c
+niit@niit-OptiPlex-3020:~/Desktop/exam$ gdb U101114FCS203 
+GNU gdb (Ubuntu/Linaro 7.4-2012.04-0ubuntu2.1) 7.4-2012.04
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i686-linux-gnu".
+For bug reporting instructions, please see:
+<http://bugs.launchpad.net/gdb-linaro/>...
+Reading symbols from /home/niit/Desktop/exam/U101114FCS203...done.
+
+
+
+// Set breakpoints in a line and a function
+
+(gdb) b validate_name
+Breakpoint 1 at 0x80485b5: file U101114FCS203.c, line 51.
+(gdb) b 165
+Breakpoint 2 at 0x80488db: file U101114FCS203.c, line 165.
+(gdb) b main
+Breakpoint 3 at 0x804886e: file U101114FCS203.c, line 151.
+(gdb) r
+Starting program: /home/niit/Desktop/exam/U101114FCS203 
+
+
+
+// Running the program and setting a watchpoint
+
+Breakpoint 3, main () at U101114FCS203.c:151
+151		printf("Do you want to insert a node in the list (y/n): ");
+(gdb) watch ch1
+Hardware watchpoint 4: ch1
+(gdb) n
+152		scanf("%c", &ch1);
+(gdb) c
+Continuing.
+
+
+
+
+
+// Continuing the program. Note that the value of the watched variable has changed
+
+Do you want to insert a node in the list (y/n): y
+Hardware watchpoint 4: ch1
+
+Old value = -73 '\267'
+New value = 121 'y'
+0xb7e6cdc7 in _IO_vfscanf () from /lib/i386-linux-gnu/libc.so.6
+(gdb) c
+Continuing.
+
+
+
+// Continuing the program
+
+Enter a name to be inserted in the linked list: Piyush
+
+Breakpoint 1, validate_name (name=0x804b008 "Piyush") at U101114FCS203.c:51
+51		if(name[0] >= 65 && name[0] <= 90)
+(gdb) bt
+#0  validate_name (name=0x804b008 "Piyush") at U101114FCS203.c:51
+#1  0x08048678 in getName () at U101114FCS203.c:74
+#2  0x080488ed in main () at U101114FCS203.c:169
+
+
+
+
+
+
+// Note the value of the watched variable has again changed
+
+(gdb) c
+Continuing.
+Enter email-id of Piyush: piyush@gmail.com
+
+Current List: 
+Name: Piyush	email-id: piyush@gmail.com ->
+Null
+
+Hardware watchpoint 4: ch1
+
+Old value = 121 'y'
+New value = 10 '\n'
+0xb7e6cdc7 in _IO_vfscanf () from /lib/i386-linux-gnu/libc.so.6
+
+
+
+
+
+
+// Continue the rest of the program
+
+(gdb) c
+Continuing.
+Do you want to insert a node in the list (y/n): n
+Hardware watchpoint 4: ch1
+
+Old value = 10 '\n'
+New value = 110 'n'
+0xb7e6cdc7 in _IO_vfscanf () from /lib/i386-linux-gnu/libc.so.6
+(gdb) c
+Continuing.
+
+Breakpoint 2, main () at U101114FCS203.c:165
+165				displayCurrentList();
+(gdb) bt
+#0  main () at U101114FCS203.c:165
+(gdb) c
+Continuing.
+
+Current List: 
+Name: Piyush	email-id: piyush@gmail.com ->
+Null
+
+
+Watchpoint 4 deleted because the program has left the block in
+which its expression is valid.
+0xb7e374e3 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+(gdb) c
+Continuing.
+[Inferior 1 (process 3681) exited normally]
+(gdb) q
+niit@niit-OptiPlex-3020:~/Desktop/exam$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Error was introduced to show the output of gdb
+(The error was in line 178 where the scanf was taking carriage return as an input. Hence had to use scanf twice to remove the bug)
+With erroneous code
+
+
+
+
+
+
+niit@niit-OptiPlex-3020:~/Desktop/exam$ gcc -g -o U101114FCS203 U101114FCS203.c
+niit@niit-OptiPlex-3020:~/Desktop/exam$ gdb U101114FCS203 
+GNU gdb (Ubuntu/Linaro 7.4-2012.04-0ubuntu2.1) 7.4-2012.04
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i686-linux-gnu".
+For bug reporting instructions, please see:
+<http://bugs.launchpad.net/gdb-linaro/>...
+Reading symbols from /home/niit/Desktop/exam/U101114FCS203...done.
+
+
+
+
+
+// Set breakpoints
+
+(gdb) b main
+Breakpoint 1 at 0x804886e: file U101114FCS203.c, line 151.
+(gdb) watch ch1
+No symbol "ch1" in current context.
+(gdb) b 165
+Breakpoint 2 at 0x80488db: file U101114FCS203.c, line 165.
+(gdb) b validate_name
+Breakpoint 3 at 0x80485b5: file U101114FCS203.c, line 51.
+(gdb) r
+Starting program: /home/niit/Desktop/exam/U101114FCS203 
+
+
+
+
+
+// Set watchpoint
+
+Breakpoint 1, main () at U101114FCS203.c:151
+151		printf("Do you want to insert a node in the list (y/n): ");
+(gdb) watch ch1
+Hardware watchpoint 4: ch1
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) n
+Program not restarted.
+(gdb) c
+Continuing.
+
+
+
+
+
+// Continue the program
+
+Do you want to insert a node in the list (y/n): y
+Hardware watchpoint 4: ch1
+
+Old value = -73 '\267'
+New value = 121 'y'
+0xb7e6cdc7 in _IO_vfscanf () from /lib/i386-linux-gnu/libc.so.6
+(gdb) c
+Continuing.
+Enter a name to be inserted in the linked list: Piyush
+
+Breakpoint 3, validate_name (name=0x804b008 "Piyush") at U101114FCS203.c:51
+51		if(name[0] >= 65 && name[0] <= 90)
+(gdb) c
+Continuing.
+Enter email-id of Piyush: piyush@gmail.com
+
+Current List: 
+Name: Piyush	email-id: piyush@gmail.com ->
+Null
+
+
+
+
+
+
+// Note the bug, ch1 has taken carriage return as input
+
+Hardware watchpoint 4: ch1
+
+Old value = 121 'y'
+New value = 10 '\n'
+0xb7e6cdc7 in _IO_vfscanf () from /lib/i386-linux-gnu/libc.so.6
+(gdb) c
+Continuing.
+
+
+
+
+
+
+
+
+// Continue the rest of the program
+
+Do you want to insert a node in the list (y/n): Enter either y or n
+Do you want to insert a node in the list (y/n): y
+Hardware watchpoint 4: ch1
+
+Old value = 10 '\n'
+New value = 121 'y'
+0xb7e6cdc7 in _IO_vfscanf () from /lib/i386-linux-gnu/libc.so.6
+(gdb) c
+Continuing.
+Enter a name to be inserted in the linked list: Piyush
+
+Breakpoint 3, validate_name (name=0x804b058 "Piyush") at U101114FCS203.c:51
+51		if(name[0] >= 65 && name[0] <= 90)
+(gdb) bt
+#0  validate_name (name=0x804b058 "Piyush") at U101114FCS203.c:51
+#1  0x08048678 in getName () at U101114FCS203.c:74
+#2  0x080488ed in main () at U101114FCS203.c:169
+(gdb) c
+Continuing.
+Enter email-id of Piyush: qwe@gmail.com
+
+Current List: 
+Name: Piyush	email-id: piyush@gmail.com ->
+Name: Piyush	email-id: qwe@gmail.com ->
+Null
+
+Hardware watchpoint 4: ch1
+
+Old value = 121 'y'
+New value = 10 '\n'
+0xb7e6cdc7 in _IO_vfscanf () from /lib/i386-linux-gnu/libc.so.6
+(gdb) c
+Continuing.
+Do you want to insert a node in the list (y/n): Enter either y or n
+Do you want to insert a node in the list (y/n): n
+Hardware watchpoint 4: ch1
+
+Old value = 10 '\n'
+New value = 110 'n'
+0xb7e6cdc7 in _IO_vfscanf () from /lib/i386-linux-gnu/libc.so.6
+(gdb) c
+Continuing.
+
+Breakpoint 2, main () at U101114FCS203.c:165
+165				displayCurrentList();
+(gdb) bt
+#0  main () at U101114FCS203.c:165
+(gdb) c
+Continuing.
+
+Current List: 
+Name: Piyush	email-id: piyush@gmail.com ->
+Name: Piyush	email-id: qwe@gmail.com ->
+Null
+
+
+Watchpoint 4 deleted because the program has left the block in
+which its expression is valid.
+0xb7e374e3 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+(gdb) c
+Continuing.
+[Inferior 1 (process 3714) exited normally]
+(gdb) q
+niit@niit-OptiPlex-3020:~/Desktop/exam$ 
+

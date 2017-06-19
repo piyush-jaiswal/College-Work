@@ -1,0 +1,29 @@
+# declaring variables
+cc=-c
+flags=-o
+com=g++
+dep=functions.o constructors.o operator_overloading.o
+
+# compiles the main program along with the dependencies
+compile: $(dep)
+	$(com) $(dep) $(flags) main main.cpp
+
+# runs the main program
+run: compile main
+	./main
+
+# compiles the fuctions.cpp file and produces .o file
+functions.o:
+	$(com) $(cc) functions.cpp
+
+# compiles the constructors.cpp file and produces .o file
+constructors.o:
+	$(com) $(cc) constructors.cpp
+
+# compiles the operator_overloading.cpp file and produces .o file
+operator_overloading.o:
+	$(com) $(cc) operator_overloading.cpp
+
+# removes the .o and main object file
+clean:
+	rm -rf *.o main

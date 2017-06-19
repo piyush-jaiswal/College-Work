@@ -1,0 +1,224 @@
+(gdb) b main
+Breakpoint 1 at 0x804854f: file Q1.c, line 32.
+(gdb) b display
+Breakpoint 2 at 0x804849b: file Q1.c, line 21.
+(gdb) b 32
+Note: breakpoint 1 also set at pc 0x804854f.
+Breakpoint 3 at 0x804854f: file Q1.c, line 32.
+(gdb) r
+Starting program: /home/user/Documents/Piyush/lab15/Q1 
+
+Breakpoint 1, main () at Q1.c:32
+32	  struct person **details = (struct person**) malloc(sizeof(struct person*) * 10);
+(gdb) watch details -> name
+Hardware watchpoint 4: details -> name
+(gdb) watch details -> age
+Hardware watchpoint 5: details -> age
+(gdb) watch details -> dob
+Hardware watchpoint 6: details -> dob
+(gdb) b 37
+Breakpoint 7 at 0x80485a0: file Q1.c, line 37.
+(gdb) c
+Continuing.
+Warning:
+Could not insert hardware watchpoint 4.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+0x08048556 in main () at Q1.c:32
+32	  struct person **details = (struct person**) malloc(sizeof(struct person*) * 10);
+(gdb) c
+Continuing.
+Warning:
+Could not insert hardware watchpoint 4.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+(gdb) 
+(gdb) watch details
+Hardware watchpoint 8: details
+(gdb) c
+Continuing.
+Warning:
+Could not insert hardware watchpoint 4.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+(gdb) d 4
+(gdb) c
+Continuing.
+Hardware watchpoint 8: details
+
+Old value = (struct person **) 0xb7fc2ff4
+New value = (struct person **) 0x804b008
+main () at Q1.c:33
+33	  for (i = 0; i < 10; i++)
+(gdb) c
+Continuing.
+Hardware watchpoint 5: details -> age
+
+Old value = <unreadable>
+New value = 0
+Hardware watchpoint 6: details -> dob
+
+Old value = <unreadable>
+New value = (struct Date *) 0x0
+main () at Q1.c:36
+36	    details[i] -> dob = (struct Date*) malloc (sizeof(struct Date));
+(gdb) c
+Continuing.
+Hardware watchpoint 6: details -> dob
+
+Old value = (struct Date *) 0x0
+New value = (struct Date *) 0x804b048
+
+Breakpoint 7, main () at Q1.c:37
+37	    details[i] -> name = (char*) malloc (sizeof(char) * 20);
+(gdb) c
+Continuing.
+
+Breakpoint 7, main () at Q1.c:37
+37	    details[i] -> name = (char*) malloc (sizeof(char) * 20);
+(gdb) c
+Continuing.
+
+Breakpoint 7, main () at Q1.c:37
+37	    details[i] -> name = (char*) malloc (sizeof(char) * 20);
+(gdb) c
+Continuing.
+
+Breakpoint 7, main () at Q1.c:37
+37	    details[i] -> name = (char*) malloc (sizeof(char) * 20);
+(gdb) c
+Continuing.
+
+Breakpoint 7, main () at Q1.c:37
+37	    details[i] -> name = (char*) malloc (sizeof(char) * 20);
+(gdb) c
+Continuing.
+
+Breakpoint 7, main () at Q1.c:37
+37	    details[i] -> name = (char*) malloc (sizeof(char) * 20);
+(gdb) c
+Continuing.
+
+Breakpoint 7, main () at Q1.c:37
+37	    details[i] -> name = (char*) malloc (sizeof(char) * 20);
+(gdb) c
+Continuing.
+
+Breakpoint 7, main () at Q1.c:37
+37	    details[i] -> name = (char*) malloc (sizeof(char) * 20);
+(gdb) c
+Continuing.
+
+Breakpoint 7, main () at Q1.c:37
+37	    details[i] -> name = (char*) malloc (sizeof(char) * 20);
+(gdb) c
+Continuing.
+
+Breakpoint 7, main () at Q1.c:37
+37	    details[i] -> name = (char*) malloc (sizeof(char) * 20);
+(gdb) c
+Continuing.
+Enter the details of 10 persons
+Enter the name, age, DOB with day month and year in order
+Piyush
+45
+Hardware watchpoint 5: details -> age
+
+Old value = 0
+New value = 45
+0xb7e6d85d in _IO_vfscanf_internal (s=0xb7fc3ac0, format=0x8048841 "%d", 
+    argptr=0xbffff084 "<\260\004\b\364/\374\267e\016\345\267\060\322\376\267", 
+    errp=0x0) at vfscanf.c:1857
+1857	vfscanf.c: No such file or directory.
+(gdb) c
+Continuing.
+45
+45
+45
+Enter the name, age, DOB with day month and year in order
+Prateek
+45
+45
+45
+45
+Enter the name, age, DOB with day month and year in order
+NVS 
+45
+45
+45
+45
+
+Breakpoint 2, display (details=0x804b008, size=3) at Q1.c:21
+21	  for (i = 0; i < size; i++)
+(gdb) b 25
+Breakpoint 9 at 0x80484e4: file Q1.c, line 25.
+(gdb) 
+(gdb) c
+Continuing.
+Name = Piyush
+Age = 45
+
+Breakpoint 9, display (details=0x804b008, size=3) at Q1.c:25
+25	    printf("Date of birth in day/month/year = %d/%d/%d\n", details[i] -> dob -> day, details[i] -> dob -> month, details[i] -> dob -> year);     
+(gdb) p details -> name
+$1 = 0x804b058 "Piyush"
+(gdb) p details -> age
+$2 = 45
+(gdb) p details -> dob
+$3 = (struct Date *) 0x804b048
+(gdb) p details -> dob -> day
+$4 = 45
+(gdb) p details -> dob -> month
+$5 = 45
+(gdb) p details -> dob -> year
+$6 = 45
+(gdb) c
+Continuing.
+Date of birth in day/month/year = 45/45/45
+Name = Prateek
+Age = 45
+
+Breakpoint 9, display (details=0x804b008, size=3) at Q1.c:25
+25	    printf("Date of birth in day/month/year = %d/%d/%d\n", details[i] -> dob -> day, details[i] -> dob -> month, details[i] -> dob -> year);     
+(gdb) p details -> name
+$7 = 0x804b058 "Piyush"
+(gdb) p details -> name
+$8 = 0x804b058 "Piyush"
+(gdb) p details[1] -> name
+$9 = 0x804b090 "Prateek"
+(gdb) p details[2] -> name
+$10 = 0x804b0c8 "NVS"
+(gdb) p details[2] -> age
+$11 = 45
+(gdb) c
+Continuing.
+Date of birth in day/month/year = 45/45/45
+Name = NVS
+Age = 45
+
+Breakpoint 9, display (details=0x804b008, size=3) at Q1.c:25
+25	    printf("Date of birth in day/month/year = %d/%d/%d\n", details[i] -> dob -> day, details[i] -> dob -> month, details[i] -> dob -> year);     
+(gdb) c
+Continuing.
+Date of birth in day/month/year = 45/45/45
+
+Watchpoint 5 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 6 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 8 deleted because the program has left the block in
+which its expression is valid.
+__libc_start_main (main=0x8048545 <main>, argc=1, ubp_av=0xbffff144, 
+    init=0x80486d0 <__libc_csu_init>, fini=0x8048740 <__libc_csu_fini>, 
+    rtld_fini=0xb7fed230 <_dl_fini>, stack_end=0xbffff13c) at libc-start.c:258
+258	libc-start.c: No such file or directory.
+(gdb) c
+Continuing.
+[Inferior 1 (process 27734) exited normally]
+(gdb) 
+

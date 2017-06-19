@@ -1,0 +1,178 @@
+niit@niit-OptiPlex-3020:~/Desktop/exam$ make debug
+gdb exam
+GNU gdb (Ubuntu/Linaro 7.4-2012.04-0ubuntu2.1) 7.4-2012.04
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i686-linux-gnu".
+For bug reporting instructions, please see:
+<http://bugs.launchpad.net/gdb-linaro/>...
+Reading symbols from /home/niit/Desktop/exam/exam...done.
+(gdb) 
+
+
+
+
+
+
+
+
+
+
+// Set breakpoints
+
+(gdb) b main
+Breakpoint 1 at 0x8048e11: file exam.cpp, line 88.
+(gdb) b pushWords
+Breakpoint 2 at 0x8048bec: file exam.cpp, line 35.
+(gdb) b popWord
+Breakpoint 3 at 0x8048d55: file exam.cpp, line 67.
+(gdb) b 99
+Breakpoint 4 at 0x8048e72: file exam.cpp, line 99.
+(gdb) b 106
+Breakpoint 5 at 0x8048eb0: file exam.cpp, line 106.
+
+
+
+
+
+
+
+
+
+
+
+// Information of all breakpoints
+
+(gdb) info b
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08048e11 in main() at exam.cpp:88
+2       breakpoint     keep y   0x08048bec in pushWords(std::basic_ifstream<char, std::char_traits<char> >&) at exam.cpp:35
+3       breakpoint     keep y   0x08048d55 in popWord(std::basic_ifstream<char, std::char_traits<char> >&) at exam.cpp:67
+4       breakpoint     keep y   0x08048e72 in main() at exam.cpp:99
+5       breakpoint     keep y   0x08048eb0 in main() at exam.cpp:106
+(gdb) 
+
+
+
+
+
+
+
+
+
+
+
+
+// Debugging the program
+
+(gdb) r
+Starting program: /home/niit/Desktop/exam/exam 
+
+Breakpoint 1, main () at exam.cpp:88
+88	{
+(gdb) s
+89		ifstream file("record.txt");
+(gdb) s
+92		cout << endl;
+(gdb) s
+
+93		while(file.good())
+(gdb) n
+95			file.get(ch);
+(gdb) n
+97			if(ch == '#')
+(gdb) n
+104			if(ch == '!')
+(gdb) n
+93		while(file.good())
+(gdb) n
+95			file.get(ch);
+(gdb) n
+97			if(ch == '#')
+(gdb) n
+104			if(ch == '!')
+(gdb) n
+93		while(file.good())
+(gdb) n
+95			file.get(ch);
+(gdb) n
+97			if(ch == '#')
+(gdb) n
+104			if(ch == '!')
+(gdb) n
+93		while(file.good())
+(gdb) n
+95			file.get(ch);
+(gdb) n
+97			if(ch == '#')
+(gdb) n
+104			if(ch == '!')
+(gdb) n
+93		while(file.good())
+(gdb) n
+95			file.get(ch);
+(gdb) c
+Continuing.
+
+Breakpoint 4, main () at exam.cpp:99
+99				pushWords(file);
+(gdb) c
+Continuing.
+
+Breakpoint 2, pushWords (file=...) at exam.cpp:35
+35		file.get(ch);
+(gdb) c
+Continuing.
+Pushing elements in the stack as it encountered a #:
+segmentation -> lesion -> MS -> for -> approaches -> NULL
+
+
+Breakpoint 4, main () at exam.cpp:99
+99				pushWords(file);
+(gdb) c
+Continuing.
+
+Breakpoint 2, pushWords (file=...) at exam.cpp:35
+35		file.get(ch);
+(gdb) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Delete the breakpoints
+
+(gdb) d 1
+(gdb) info b
+Num     Type           Disp Enb Address    What
+2       breakpoint     keep y   0x08048bec in pushWords(std::basic_ifstream<char, std::char_traits<char> >&) at exam.cpp:35
+	breakpoint already hit 2 times
+3       breakpoint     keep y   0x08048d55 in popWord(std::basic_ifstream<char, std::char_traits<char> >&) at exam.cpp:67
+4       breakpoint     keep y   0x08048e72 in main() at exam.cpp:99
+	breakpoint already hit 2 times
+5       breakpoint     keep y   0x08048eb0 in main() at exam.cpp:106
+(gdb) d 2
+(gdb) d 3
+(gdb) info b
+Num     Type           Disp Enb Address    What
+4       breakpoint     keep y   0x08048e72 in main() at exam.cpp:99
+	breakpoint already hit 2 times
+5       breakpoint     keep y   0x08048eb0 in main() at exam.cpp:106
+(gdb) d 4
+(gdb) info b
+Num     Type           Disp Enb Address    What
+5       breakpoint     keep y   0x08048eb0 in main() at exam.cpp:106
+(gdb) 
+

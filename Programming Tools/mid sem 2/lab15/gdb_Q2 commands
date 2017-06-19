@@ -1,0 +1,459 @@
+(gdb) b main
+Breakpoint 1 at 0x8048ac1: file Q2.cpp, line 69.
+(gdb) b 70
+Breakpoint 2 at 0x8048ae5: file Q2.cpp, line 70.
+(gdb) b 72
+Breakpoint 3 at 0x8048b23: file Q2.cpp, line 72.
+(gdb) b bank :: bank
+Breakpoint 4 at 0x804881a: file Q2.cpp, line 24.
+(gdb) b bank :: deposit
+Breakpoint 5 at 0x80488a6: file Q2.cpp, line 38.
+(gdb) b bank :: withdraw
+Breakpoint 6 at 0x804894c: file Q2.cpp, line 48.
+(gdb) r
+Starting program: /home/user/Documents/Piyush/lab15/Q2 
+
+Breakpoint 1, main () at Q2.cpp:69
+69	  cout << "First customer" << endl;
+(gdb) b ob1 -> name
+Function "ob1 -> name" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) n
+(gdb) b ob1.name
+Function "ob1.name" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) n
+(gdb) c
+Continuing.
+First customer
+
+Breakpoint 2, main () at Q2.cpp:70
+70	  bank *ob1 = new bank();
+(gdb) b ob1 -> name
+Function "ob1 -> name" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) n
+(gdb) b 71
+Breakpoint 7 at 0x8048aff: file Q2.cpp, line 71.
+(gdb) c
+Continuing.
+
+Breakpoint 4, bank::bank (this=0x804c008) at Q2.cpp:24
+24	  cout << "Name: ";
+(gdb) c
+Continuing.
+Name: Piyush
+Account type: Savings
+Name: Piyush
+Balance = Rs 0
+
+
+Breakpoint 7, main () at Q2.cpp:71
+71	  cout << "Second customer" << endl;
+(gdb) b ob1 -> name
+Function "ob1 -> name" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) n
+(gdb) b ob1.name
+Function "ob1.name" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) n
+(gdb) 
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+
+Starting program: /home/user/Documents/Piyush/lab15/Q2 
+
+Breakpoint 1, main () at Q2.cpp:69
+69	  cout << "First customer" << endl;
+(gdb) watch ob1 -> accNo
+Hardware watchpoint 8: ob1 -> accNo
+(gdb) watch ob1 -> name
+Watchpoint 9: ob1 -> name
+(gdb) watch ob1 -> typeOfAccount
+Watchpoint 10: ob1 -> typeOfAccount
+(gdb) watch ob1 -> balance
+Hardware watchpoint 11: ob1 -> balance
+(gdb) c
+Continuing.
+Warning:
+Could not insert hardware watchpoint 11.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+0x08048ac9 in main () at Q2.cpp:69
+69	  cout << "First customer" << endl;
+(gdb) d 11
+(gdb) 
+(gdb) c
+Continuing.
+
+Watchpoint 9 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 9 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 10 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 10 deleted because the program has left the block in
+which its expression is valid.
+0xb7fec24b in _dl_fixup (l=0xb7fff918, reloc_arg=<optimized out>) at dl-runtime.c:119
+119	dl-runtime.c: No such file or directory.
+(gdb) c
+Continuing.
+Watchpoint 8 deleted because the program has left the block
+in which its expression is valid.
+First customer
+
+Breakpoint 2, main () at Q2.cpp:70
+70	  bank *ob1 = new bank();
+(gdb) c
+Continuing.
+
+Breakpoint 4, bank::bank (this=0x804c008) at Q2.cpp:24
+24	  cout << "Name: ";
+(gdb) c
+Continuing.
+Name: Piyush
+Account type: Savings
+Name: Piyush
+Balance = Rs 0
+
+
+Breakpoint 7, main () at Q2.cpp:71
+71	  cout << "Second customer" << endl;
+(gdb) c
+Continuing.
+Second customer
+
+Breakpoint 3, main () at Q2.cpp:72
+72	  bank *ob2 = new bank();
+(gdb) c
+Continuing.
+
+Breakpoint 4, bank::bank (this=0x804c040) at Q2.cpp:24
+24	  cout << "Name: ";
+(gdb) c
+Continuing.
+Name: NVS
+Account type: Coding :)
+Name: NVS
+Balance = Rs 0
+
+
+Breakpoint 6, bank::withdraw (this=0x804c008, amount=50) at Q2.cpp:48
+48	  cout << "trying to withdraw" << endl;
+(gdb) c
+Continuing.
+trying to withdraw
+Current:
+Name: Piyush
+Balance = Rs 0
+
+Error. Insufficient funds!
+
+
+Breakpoint 5, bank::deposit (this=0x804c008, amount=1000) at Q2.cpp:38
+38	  cout << "Trying to deposit...." << endl;
+(gdb) c
+Continuing.
+Trying to deposit....
+Before:
+Name: Piyush
+Balance = Rs 0
+
+After:
+Name: Piyush
+Balance = Rs 1000
+
+
+Breakpoint 6, bank::withdraw (this=0x804c008, amount=200) at Q2.cpp:48
+48	  cout << "trying to withdraw" << endl;
+(gdb) watch this -> balance
+Hardware watchpoint 12: this -> balance
+(gdb) c
+Continuing.
+trying to withdraw
+Current:
+Name: Piyush
+Balance = Rs 1000
+
+Hardware watchpoint 12: this -> balance
+
+Old value = 1000
+New value = 800
+bank::withdraw (this=0x804c008, amount=200) at Q2.cpp:57
+57	  cout << "After" << endl;
+(gdb) c
+Continuing.
+After
+Name: Piyush
+Balance = Rs 800
+
+
+Watchpoint 12 deleted because the program has left the block in
+which its expression is valid.
+main () at Q2.cpp:77
+77	  ob2 -> deposit(5000.00);
+(gdb) c
+Continuing.
+
+Breakpoint 5, bank::deposit (this=0x804c040, amount=5000) at Q2.cpp:38
+38	  cout << "Trying to deposit...." << endl;
+(gdb) watch this -> balance
+Hardware watchpoint 13: this -> balance
+(gdb) c
+Continuing.
+Trying to deposit....
+Before:
+Name: NVS
+Balance = Rs 0
+
+Hardware watchpoint 13: this -> balance
+
+Old value = 0
+New value = 5000
+bank::deposit (this=0x804c040, amount=5000) at Q2.cpp:42
+42	  cout << "After:" << endl;
+(gdb) c
+Continuing.
+After:
+Name: NVS
+Balance = Rs 5000
+
+
+Watchpoint 13 deleted because the program has left the block in
+which its expression is valid.
+main () at Q2.cpp:78
+78	  ob2 -> withdraw(3000.00);
+(gdb) c
+Continuing.
+
+Breakpoint 6, bank::withdraw (this=0x804c040, amount=3000) at Q2.cpp:48
+48	  cout << "trying to withdraw" << endl;
+(gdb) watch this -> balance
+Hardware watchpoint 14: this -> balance
+(gdb) c
+Continuing.
+trying to withdraw
+Current:
+Name: NVS
+Balance = Rs 5000
+
+Hardware watchpoint 14: this -> balance
+
+Old value = 5000
+New value = 2000
+bank::withdraw (this=0x804c040, amount=3000) at Q2.cpp:57
+57	  cout << "After" << endl;
+(gdb) c
+Continuing.
+After
+Name: NVS
+Balance = Rs 2000
+
+
+Watchpoint 14 deleted because the program has left the block in
+which its expression is valid.
+main () at Q2.cpp:80
+80	  return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 28067) exited normally]
+(gdb) 
+
+
+
+
+
+
+(gdb) r
+Starting program: /home/user/Documents/Piyush/lab15/Q2 
+
+Breakpoint 1, main () at Q2.cpp:69
+69	  cout << "First customer" << endl;
+(gdb) c
+Continuing.
+First customer
+
+Breakpoint 2, main () at Q2.cpp:70
+70	  bank *ob1 = new bank();
+(gdb) c
+Continuing.
+
+Breakpoint 4, bank::bank (this=0x804c008) at Q2.cpp:24
+24	  cout << "Name: ";
+(gdb) c
+Continuing.
+Name: Siddarth
+Account type: Football :'(
+Name: Siddarth
+Balance = Rs 0
+
+
+Breakpoint 7, main () at Q2.cpp:71
+71	  cout << "Second customer" << endl;
+(gdb) c
+Continuing.
+Second customer
+
+Breakpoint 3, main () at Q2.cpp:72
+72	  bank *ob2 = new bank();
+(gdb) c
+Continuing.
+
+Breakpoint 4, bank::bank (this=0x804c040) at Q2.cpp:24
+24	  cout << "Name: ";
+(gdb) c
+Continuing.
+Name: Account type: SAvings
+Name: :'(
+Balance = Rs 0
+
+
+Breakpoint 6, bank::withdraw (this=0x804c008, amount=50) at Q2.cpp:48
+48	  cout << "trying to withdraw" << endl;
+(gdb) bt
+#0  bank::withdraw (this=0x804c008, amount=50) at Q2.cpp:48
+#1  0x08048b53 in main () at Q2.cpp:73
+(gdb) b display
+Function "display" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) n
+(gdb) b bank :: display
+Breakpoint 15 at 0x8048a31: file Q2.cpp, line 63.
+(gdb) c
+Continuing.
+trying to withdraw
+Current:
+
+Breakpoint 15, bank::display (this=0x804c008) at Q2.cpp:63
+63	  cout << "Name: " << name << endl;
+(gdb) bt
+#0  bank::display (this=0x804c008) at Q2.cpp:63
+#1  0x0804899f in bank::withdraw (this=0x804c008, amount=50) at Q2.cpp:50
+#2  0x08048b53 in main () at Q2.cpp:73
+(gdb) c
+Continuing.
+Name: Siddarth
+Balance = Rs 0
+
+Error. Insufficient funds!
+
+
+Breakpoint 5, bank::deposit (this=0x804c008, amount=1000) at Q2.cpp:38
+38	  cout << "Trying to deposit...." << endl;
+(gdb) bt
+#0  bank::deposit (this=0x804c008, amount=1000) at Q2.cpp:38
+#1  0x08048b69 in main () at Q2.cpp:74
+(gdb) c
+Continuing.
+Trying to deposit....
+Before:
+
+Breakpoint 15, bank::display (this=0x804c008) at Q2.cpp:63
+63	  cout << "Name: " << name << endl;
+(gdb) bt
+#0  bank::display (this=0x804c008) at Q2.cpp:63
+#1  0x080488f9 in bank::deposit (this=0x804c008, amount=1000) at Q2.cpp:40
+#2  0x08048b69 in main () at Q2.cpp:74
+(gdb) c
+Continuing.
+Name: Siddarth
+Balance = Rs 0
+
+After:
+
+Breakpoint 15, bank::display (this=0x804c008) at Q2.cpp:63
+63	  cout << "Name: " << name << endl;
+(gdb) c
+Continuing.
+Name: Siddarth
+Balance = Rs 1000
+
+
+Breakpoint 6, bank::withdraw (this=0x804c008, amount=200) at Q2.cpp:48
+48	  cout << "trying to withdraw" << endl;
+(gdb) c
+Continuing.
+trying to withdraw
+Current:
+
+Breakpoint 15, bank::display (this=0x804c008) at Q2.cpp:63
+63	  cout << "Name: " << name << endl;
+(gdb) c
+Continuing.
+Name: Siddarth
+Balance = Rs 1000
+
+After
+
+Breakpoint 15, bank::display (this=0x804c008) at Q2.cpp:63
+63	  cout << "Name: " << name << endl;
+(gdb) bt
+#0  bank::display (this=0x804c008) at Q2.cpp:63
+#1  0x08048a27 in bank::withdraw (this=0x804c008, amount=200) at Q2.cpp:58
+#2  0x08048b7f in main () at Q2.cpp:75
+(gdb) c
+Continuing.
+Name: Siddarth
+Balance = Rs 800
+
+
+Breakpoint 5, bank::deposit (this=0x804c040, amount=5000) at Q2.cpp:38
+38	  cout << "Trying to deposit...." << endl;
+(gdb) bt
+#0  bank::deposit (this=0x804c040, amount=5000) at Q2.cpp:38
+#1  0x08048b95 in main () at Q2.cpp:77
+(gdb) c
+Continuing.
+Trying to deposit....
+Before:
+
+Breakpoint 15, bank::display (this=0x804c040) at Q2.cpp:63
+63	  cout << "Name: " << name << endl;
+(gdb) c
+Continuing.
+Name: :'(
+Balance = Rs 0
+
+After:
+
+Breakpoint 15, bank::display (this=0x804c040) at Q2.cpp:63
+63	  cout << "Name: " << name << endl;
+(gdb) bt
+#0  bank::display (this=0x804c040) at Q2.cpp:63
+#1  0x08048937 in bank::deposit (this=0x804c040, amount=5000) at Q2.cpp:43
+#2  0x08048b95 in main () at Q2.cpp:77
+(gdb) c
+Continuing.
+Name: :'(
+Balance = Rs 5000
+
+
+Breakpoint 6, bank::withdraw (this=0x804c040, amount=3000) at Q2.cpp:48
+48	  cout << "trying to withdraw" << endl;
+(gdb) c
+Continuing.
+trying to withdraw
+Current:
+
+Breakpoint 15, bank::display (this=0x804c040) at Q2.cpp:63
+63	  cout << "Name: " << name << endl;
+(gdb) c
+Continuing.
+Name: :'(
+Balance = Rs 5000
+
+After
+
+Breakpoint 15, bank::display (this=0x804c040) at Q2.cpp:63
+63	  cout << "Name: " << name << endl;
+(gdb) c
+Continuing.
+Name: :'(
+Balance = Rs 2000
+
+[Inferior 1 (process 28100) exited normally]
+(gdb) bt
+No stack.
+(gdb) 
+
+

@@ -1,0 +1,428 @@
+        -:    0:Source:sample.c
+        -:    0:Graph:sample.gcno
+        -:    0:Data:sample.gcda
+        -:    0:Runs:4
+        -:    0:Programs:1
+        -:    1:/* Example program for time profiling. */
+        -:    2:
+        -:    3:#include <stdbool.h>
+        -:    4:#include <stdio.h>
+        -:    5:#include <stdlib.h>
+        -:    6:#include <string.h>
+        -:    7:#include <sys/time.h>
+        -:    8:
+        -:    9:// Declaring the counters for the various functions
+        -:   10:struct function_counter {
+        -:   11:	char function_name[50];
+        -:   12:	int counter;
+        -:   13:	double time_taken;
+        -:   14:};
+        -:   15:typedef struct function_counter *counter;
+        -:   16:
+        -:   17:counter *function_counter_list;
+        -:   18:int noOfFunctions = 16;
+        -:   19:
+        -:   20:void
+        4:   21:initialize_function_counters(void)
+        -:   22:{
+        -:   23:	struct timeval tv1, tv2;
+        4:   24:	gettimeofday(&tv1, 0);
+        -:   25:
+        -:   26:	int i;
+        4:   27:	function_counter_list = (counter *) malloc(sizeof(counter) * noOfFunctions);
+       68:   28:	for(i = 0; i < noOfFunctions; i++)
+        -:   29:	{
+       64:   30:		function_counter_list[i] = (counter) malloc (sizeof(struct function_counter));
+       64:   31:		function_counter_list[i] -> counter = 0;
+       64:   32:		function_counter_list[i] -> time_taken = 0;
+        -:   33:	}
+        -:   34:	
+        4:   35:	strcpy(function_counter_list[0] -> function_name, "initialize_function_counters");
+        4:   36:	strcpy(function_counter_list[1] -> function_name, "make_empty");
+        4:   37:	strcpy(function_counter_list[2] -> function_name, "make_nonempty");
+        4:   38:	strcpy(function_counter_list[3] -> function_name, "is_empty");
+        4:   39:	strcpy(function_counter_list[4] -> function_name, "make_list_helper");
+        4:   40:	strcpy(function_counter_list[5] -> function_name, "make_list");
+        4:   41:	strcpy(function_counter_list[6] -> function_name, "append_lists");
+        4:   42:	strcpy(function_counter_list[7] -> function_name, "get_num");
+        4:   43:	strcpy(function_counter_list[8] -> function_name, "get_data");
+        4:   44:	strcpy(function_counter_list[9] -> function_name, "insert_list");
+        4:   45:	strcpy(function_counter_list[10] -> function_name, "sort_list");
+        4:   46:	strcpy(function_counter_list[11] -> function_name, "sort_data");
+        4:   47:	strcpy(function_counter_list[12] -> function_name, "print_list");
+        4:   48:	strcpy(function_counter_list[13] -> function_name, "print_data");
+        4:   49:	strcpy(function_counter_list[14] -> function_name, "show_function_counters");
+        4:   50:	strcpy(function_counter_list[15] -> function_name, "main");
+        -:   51:	
+        4:   52:	function_counter_list[0] -> counter++;
+        -:   53:	
+        4:   54:	gettimeofday(&tv2, 0);
+        4:   55:	function_counter_list[0] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        4:   56:}
+        -:   57:
+        -:   58:
+        -:   59:struct AList {
+        -:   60:	int first;
+        -:   61:	struct AList *rest;
+        -:   62:};
+        -:   63:
+        -:   64:typedef struct AList *List;
+        -:   65:
+        -:   66:List data;
+        -:   67:
+        -:   68:List
+       24:   69:make_empty(void)
+        -:   70:{
+        -:   71:	struct timeval tv1, tv2;
+       24:   72:	gettimeofday(&tv1, 0);
+        -:   73:	
+       24:   74:	function_counter_list[1] -> counter++;
+        -:   75:	
+       24:   76:	gettimeofday(&tv2, 0);
+       24:   77:	function_counter_list[1] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:   78:	
+       24:   79:	return (NULL);
+        -:   80:}
+        -:   81:
+        -:   82:List
+ 23072000:   83:make_nonempty(int first, List rest)
+        -:   84:{
+        -:   85:	struct timeval tv1, tv2;
+ 23072000:   86:	gettimeofday(&tv1, 0);
+        -:   87:		
+        -:   88:	
+ 23072000:   89:	function_counter_list[2] -> counter++;
+        -:   90:	
+        -:   91:	List list;
+        -:   92:
+ 23072000:   93:	list = malloc(sizeof(struct AList));
+ 23072000:   94:	if (list == NULL) {
+    #####:   95:		fprintf(stderr, "Couldn't allocate list element.\n");
+    #####:   96:		exit(1);
+        -:   97:	}
+ 23072000:   98:	list->first = first;
+ 23072000:   99:	list->rest = rest;
+        -:  100:	
+ 23072000:  101:	gettimeofday(&tv2, 0);
+ 23072000:  102:	function_counter_list[2] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  103:	
+ 23072000:  104:	return (list);
+        -:  105:}
+        -:  106:
+        -:  107:bool
+ 23128028:  108:is_empty(List list)
+        -:  109:{
+        -:  110:	struct timeval tv1, tv2;
+ 23128028:  111:	gettimeofday(&tv1, 0);
+        -:  112:
+ 23128028:  113:	function_counter_list[3] -> counter++;
+        -:  114:	
+ 23128028:  115:	gettimeofday(&tv2, 0);
+ 23128028:  116:	function_counter_list[3] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  117:	
+ 23128028:  118:	return (list == NULL);
+        -:  119:}
+        -:  120:
+        -:  121:List
+    28000:  122:make_list_helper(unsigned int size, List accum)
+        -:  123:{
+        -:  124:	struct timeval tv1, tv2;
+    28000:  125:	gettimeofday(&tv1, 0);
+        -:  126:	
+        -:  127:	List l;
+        -:  128:
+    28000:  129:	function_counter_list[4] -> counter++;
+        -:  130:	
+        -:  131:
+    28000:  132:	if (size == 1) {
+       16:  133:		l = (make_nonempty(size, accum));
+        -:  134:		
+       16:  135:		gettimeofday(&tv2, 0);
+       16:  136:		function_counter_list[4] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  137:		
+       16:  138:		return l;
+        -:  139:	}
+        -:  140:	else {
+    27984:  141:		l = (make_list_helper(size - 1, make_nonempty(size, accum)));
+        -:  142:		
+    27984:  143:		gettimeofday(&tv2, 0);
+    27984:  144:		function_counter_list[4] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  145:		
+    27984:  146:		return l;
+        -:  147:	}
+        -:  148:}
+        -:  149:
+        -:  150:List
+       16:  151:make_list(unsigned int size)
+        -:  152:{
+        -:  153:	struct timeval tv1, tv2;
+       16:  154:	gettimeofday(&tv1, 0);
+        -:  155:	
+        -:  156:	List l;
+        -:  157:
+       16:  158:	function_counter_list[5] -> counter++;
+        -:  159:	
+       16:  160:	gettimeofday(&tv2, 0);
+       16:  161:	function_counter_list[5] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  162:	
+       16:  163:	l = (make_list_helper(size, make_empty()));
+        -:  164:	
+       16:  165:	gettimeofday(&tv2, 0);
+       16:  166:	function_counter_list[5] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  167:		
+       16:  168:	return l;
+        -:  169:}
+        -:  170:
+        -:  171:List
+    32016:  172:append_lists(List list1, List list2)
+        -:  173:{
+        -:  174:	struct timeval tv1, tv2;
+    32016:  175:	gettimeofday(&tv1, 0);
+        -:  176:	
+        -:  177:	List l;
+        -:  178:
+    32016:  179:	function_counter_list[6] -> counter++;
+        -:  180:
+        -:  181:	List return_list;
+        -:  182:    
+        -:  183:    
+    32016:  184:	if (is_empty(list1)) {
+       16:  185:		gettimeofday(&tv2, 0);
+       16:  186:		function_counter_list[6] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  187:	
+       16:  188:		return (list2);
+        -:  189:	}
+        -:  190:	else {
+    32000:  191:		return_list = make_nonempty(list1->first,
+        -:  192:		    append_lists(list1->rest, list2));
+    32000:  193:		free(list1);
+        -:  194:		
+    32000:  195:		gettimeofday(&tv2, 0);
+    32000:  196:		function_counter_list[6] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  197:		
+    32000:  198:		return (return_list);
+        -:  199:	}
+        -:  200:}
+        -:  201:
+        -:  202:unsigned int
+       20:  203:get_num(FILE *fp)
+        -:  204:{
+        -:  205:	struct timeval tv1, tv2;
+       20:  206:	gettimeofday(&tv1, 0);	
+        -:  207:	
+       20:  208:	function_counter_list[7] -> counter++;
+        -:  209:
+       20:  210:	unsigned int n = -1;
+        -:  211:	char inp[20];
+        -:  212:
+       20:  213:	if(!feof(fp) && fp != NULL) {
+       20:  214:		fscanf(fp, "%s", inp);
+       20:  215:		n = atoi(inp);
+        -:  216:	}
+        -:  217:		
+       20:  218:	gettimeofday(&tv2, 0);
+       20:  219:	function_counter_list[7] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  220:	
+       20:  221:	return n;
+        -:  222:}
+        -:  223:
+        -:  224:/* Do interesting stuff to get some data. */
+        -:  225:void
+        4:  226:get_data(void)
+        -:  227:{
+        -:  228:	struct timeval tv1, tv2;
+        4:  229:	gettimeofday(&tv1, 0);	
+        -:  230:
+        4:  231:	function_counter_list[8] -> counter++;
+        -:  232:	
+        -:  233:	unsigned int size;
+        -:  234:	FILE *fp;
+        -:  235:    
+        4:  236:    fp = fopen("testinput", "r");
+        4:  237:    if(fp == NULL)
+    #####:  238:    	printf("ERROR in reading file.\n");
+        -:  239:    	
+        4:  240:	data = make_empty();
+        -:  241:
+        4:  242:	printf("To create some data, enter a sequence of positive numbers.\n");
+        4:  243:	printf("Terminate the list with a zero.\n");
+        4:  244:	printf("Use at least moderately large numbers to create enough data "
+        -:  245:	    "for good profiling.\n");
+        4:  246:        printf("(However, you can run out of memory if you use numbers that "
+        -:  247:            "are too large.)\n");
+       24:  248:	while ((size = get_num(fp)) != 0)
+       16:  249:		data = append_lists(data, make_list(size));
+        -:  250:	
+        4:  251:	fclose(fp);
+        -:  252:	
+        4:  253:	gettimeofday(&tv2, 0);
+        4:  254:	function_counter_list[8] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        4:  255:}
+        -:  256:
+        -:  257:List
+ 23012000:  258:insert_list(int n, List list)
+        -:  259:{
+        -:  260:	struct timeval tv1, tv2;
+ 23012000:  261:	gettimeofday(&tv1, 0);	
+        -:  262:	
+ 23012000:  263:	function_counter_list[9] -> counter++;
+        -:  264:
+        -:  265:	List return_list, l;
+        -:  266:    
+ 23012000:  267:	if (is_empty(list)) {
+        4:  268:		l =  (make_nonempty(n, make_empty()));
+        -:  269:		
+        4:  270:		gettimeofday(&tv2, 0);
+        4:  271:		function_counter_list[9] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  272:		
+        4:  273:		return l;
+        -:  274:	}
+ 23011996:  275:	else if (n <= list->first) {
+    27996:  276:		l = (make_nonempty(n, list));
+        -:  277:		
+    27996:  278:		gettimeofday(&tv2, 0);
+    27996:  279:		function_counter_list[9] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  280:		
+    27996:  281:		return l;
+        -:  282:	}
+        -:  283:	else {
+ 22984000:  284:		return_list = make_nonempty(list->first,
+        -:  285:		    insert_list(n, list->rest));
+ 22984000:  286:		free(list);
+        -:  287:		
+ 22984000:  288:		gettimeofday(&tv2, 0);
+ 22984000:  289:		function_counter_list[9] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  290:		
+ 22984000:  291:		return (return_list);
+        -:  292:	}
+        -:  293:}
+        -:  294:
+        -:  295:List
+    28004:  296:sort_list(List list)
+        -:  297:{
+        -:  298:	struct timeval tv1, tv2;
+    28004:  299:	gettimeofday(&tv1, 0);
+        -:  300:
+    28004:  301:	function_counter_list[10] -> counter++;
+        -:  302:
+        -:  303:	List return_list;
+        -:  304:    
+    28004:  305:	if (is_empty(list)) {
+        4:  306:		gettimeofday(&tv2, 0);
+        4:  307:		function_counter_list[10] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  308:	
+        4:  309:		return (list);
+        -:  310:	}
+        -:  311:	else {
+    28000:  312:		return_list = insert_list(list->first, sort_list(list->rest));
+    28000:  313:		free(list);
+        -:  314:		
+    28000:  315:		gettimeofday(&tv2, 0);
+    28000:  316:		function_counter_list[10] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  317:		
+    28000:  318:		return (return_list);
+        -:  319:	}
+        -:  320:}
+        -:  321:
+        -:  322:void
+        4:  323:sort_data(void)
+        -:  324:{
+        -:  325:	struct timeval tv1, tv2;
+        4:  326:	gettimeofday(&tv1, 0);	
+        -:  327:	
+        4:  328:	function_counter_list[11] -> counter++;
+        -:  329:	
+        4:  330:	data = sort_list(data);
+        -:  331:	
+        4:  332:	gettimeofday(&tv2, 0);
+        4:  333:	function_counter_list[11] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        4:  334:}
+        -:  335:
+        -:  336:void
+    56008:  337:print_list(List list)
+        -:  338:{
+        -:  339:	struct timeval tv1, tv2;
+    56008:  340:	gettimeofday(&tv1, 0);
+        -:  341:
+    56008:  342:	function_counter_list[12] -> counter++;
+        -:  343:
+    56008:  344:	if (is_empty(list))
+        8:  345:		printf("\n");
+        -:  346:	else {
+    56000:  347:		printf("%d ", list->first);
+    56000:  348:		print_list(list->rest);
+        -:  349:	}
+        -:  350:	
+    56008:  351:	gettimeofday(&tv2, 0);
+    56008:  352:	function_counter_list[12] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+    56008:  353:}
+        -:  354:
+        -:  355:/* Print out whatever data we have. */
+        -:  356:void
+        8:  357:print_data(void)
+        -:  358:{
+        -:  359:	struct timeval tv1, tv2;
+        8:  360:	gettimeofday(&tv1, 0);
+        -:  361:	
+        8:  362:	function_counter_list[13] -> counter++;
+        -:  363:	
+        8:  364:	printf("The data:\n");
+        8:  365:	print_list(data);
+        -:  366:	
+        8:  367:	gettimeofday(&tv2, 0);
+        8:  368:	function_counter_list[13] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        8:  369:}
+        -:  370:
+        -:  371:// will not show the currect time taken
+        -:  372:void
+        4:  373:show_function_counters(void)
+        -:  374:{
+        -:  375:	struct timeval tv1, tv2;
+        4:  376:	gettimeofday(&tv1, 0);	
+        -:  377:	
+        4:  378:	function_counter_list[14] -> counter++;
+        -:  379:	
+        -:  380:	int i;
+        -:  381:	
+        4:  382:	printf("\n\nNo of function calls:\n\n");
+       68:  383:	for(i = 0; i < noOfFunctions; i++)
+        -:  384:	{
+       64:  385:		printf("%s: ", function_counter_list[i] -> function_name);
+       64:  386:		printf("%d\n", function_counter_list[i] -> counter);
+        -:  387:	}
+        -:  388:	
+        4:  389:	gettimeofday(&tv2, 0);
+        4:  390:	function_counter_list[14] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        -:  391:	
+        4:  392:	printf("\n\nTime taken by function calls in microseconds per call:\n\n");
+       68:  393:	for(i = 0; i < noOfFunctions; i++)
+        -:  394:	{
+       64:  395:		printf("%s: ", function_counter_list[i] -> function_name);
+       64:  396:		printf("%f\n", function_counter_list[i] -> time_taken / function_counter_list[i] -> counter);
+        -:  397:	}
+        -:  398:	
+        4:  399:}
+        -:  400:
+        -:  401:// will not show the currect time difference
+        -:  402:int
+        4:  403:main(void)
+        -:  404:{
+        -:  405:	struct timeval tv1, tv2;
+        4:  406:	gettimeofday(&tv1, 0);
+        -:  407:	
+        4:  408:	initialize_function_counters();
+        4:  409:	get_data();
+        4:  410:	print_data();
+        -:  411:	/* Do something interesting on the data. */
+        4:  412:	sort_data();
+        4:  413:	print_data();
+        -:  414:	
+        4:  415:	function_counter_list[15] -> counter++;
+        -:  416:	
+        4:  417:	gettimeofday(&tv2, 0);
+        4:  418:	function_counter_list[15] -> time_taken += difftime(tv2.tv_usec, tv1.tv_usec);
+        4:  419:	show_function_counters();
+        -:  420:	
+        4:  421:	return (0);
+        -:  422:}
+        -:  423:

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="MergeSort" basedir="." default="main">
+	<target name="compile">
+		<echo message="Compile*************"/>
+		<mkdir dir="op" />
+		<javac srcdir="." destdir="op" />
+	</target>
+	<target name="main" depends="compile">
+		<echo message="Main*************"/>
+		<java classname="MergeSort">
+			<classpath>
+				<pathelement path="./op" />
+				<!-- <pathelement location="./Sorting/" /> -->
+			</classpath>
+		</java>
+	</target>
+</project>

@@ -1,0 +1,240 @@
+2
+List of sorted numbers: 1 2 3 5 
+
+Please enter your choice:
+Enter 1 to perform binary search
+Enter 2 to perform bubble sort
+Enter 3 to delete a particular number
+Enter 4 to insert a number
+Enter 5 to exit
+2
+List of sorted numbers: 1 2 3 5 
+
+Please enter your choice:
+Enter 1 to perform binary search
+Enter 2 to perform bubble sort
+Enter 3 to delete a particular number
+Enter 4 to insert a number
+Enter 5 to exit
+5 
+
+Bye!
+
+[Inferior 1 (process 3416) exited normally]
+(gdb) r
+Starting program: /home/user/Documents/Piyush/lab6/mkprog2/main1 
+
+Breakpoint 1, main () at main1.cpp:8
+8	  int n, i, ch=0;
+(gdb) watch ch
+Hardware watchpoint 2: ch
+(gdb) c
+Continuing.
+Enter number of elements: 5
+Enter 5 numbers
+1 3 5 2 4
+
+Please enter your choice:
+Enter 1 to perform binary search
+Enter 2 to perform bubble sort
+Enter 3 to delete a particular number
+Enter 4 to insert a number
+Enter 5 to exit
+2
+Hardware watchpoint 2: ch
+
+Old value = 134516722
+New value = 2
+0xb7f4e146 in std::istream::operator>>(int&) ()
+   from /usr/lib/i386-linux-gnu/libstdc++.so.6
+(gdb) c
+Continuing.
+List of sorted numbers: 1 2 3 4 5 
+
+Please enter your choice:
+Enter 1 to perform binary search
+Enter 2 to perform bubble sort
+Enter 3 to delete a particular number
+Enter 4 to insert a number
+Enter 5 to exit
+1
+Hardware watchpoint 2: ch
+
+Old value = 2
+New value = 1
+0xb7f4e146 in std::istream::operator>>(int&) ()
+   from /usr/lib/i386-linux-gnu/libstdc++.so.6
+(gdb) watch ch==5
+No symbol "ch" in current context.
+(gdb) s
+Single stepping until exit from function _ZNSirsERi,
+which has no line number information.
+main () at main1.cpp:28
+28	   switch(ch)
+(gdb) s
+32	       cout << "Enter the number you want to search ";
+(gdb) watch ch==5
+Hardware watchpoint 3: ch==5
+(gdb) s
+33	       cin >> num;
+(gdb) s
+Enter the number you want to search 4
+34	       bub_sort(ar, n);
+(gdb) c
+Continuing.
+
+4 is located at position 3
+
+Please enter your choice:
+Enter 1 to perform binary search
+Enter 2 to perform bubble sort
+Enter 3 to delete a particular number
+Enter 4 to insert a number
+Enter 5 to exit
+2
+Hardware watchpoint 2: ch
+
+Old value = 1
+New value = 2
+0xb7f4e146 in std::istream::operator>>(int&) ()
+   from /usr/lib/i386-linux-gnu/libstdc++.so.6
+(gdb) c
+Continuing.
+List of sorted numbers: 1 2 3 4 5 
+
+Please enter your choice:
+Enter 1 to perform binary search
+Enter 2 to perform bubble sort
+Enter 3 to delete a particular number
+Enter 4 to insert a number
+Enter 5 to exit
+5
+Hardware watchpoint 2: ch
+
+Old value = 2
+New value = 5
+Hardware watchpoint 3: ch==5
+
+Old value = false
+New value = true
+0xb7f4e146 in std::istream::operator>>(int&) ()
+   from /usr/lib/i386-linux-gnu/libstdc++.so.6
+(gdb) trace table
+Function "table" not defined.
+Make tracepoint pending on future shared library load? (y or [n]) n
+(gdb) 
+(gdb) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(gdb) trace table
+Function "table" not defined.
+Make tracepoint pending on future shared library load? (y or [n]) n
+(gdb) p
+The history is empty.
+(gdb) p
+The history is empty.
+(gdb) ^CQuit
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 3423] will be killed.
+
+Quit anyway? (y or n) y
+user@user-OptiPlex-380:~/Documents/Piyush/lab6/mkprog2$ 
+
+
+
+
+
+
+
+
+
+user@user-OptiPlex-380:~/Documents/Piyush/lab6/mkprog2$ cat 0000000000000000000021cat: 00000000000000000000: No such file or directory
+user@user-OptiPlex-380:~/Documents/Piyush/lab6/mkprog2$ cd ..
+user@user-OptiPlex-380:~/Documents/Piyush/lab6$ cd
+user@user-OptiPlex-380:~$ 
+user@user-OptiPlex-380:~$ 
+user@user-OptiPlex-380:~$ 
+user@user-OptiPlex-380:~$ cd ..
+user@user-OptiPlex-380:/home$ ls
+user
+user@user-OptiPlex-380:/home$ cd
+user@user-OptiPlex-380:~$ cd
+user@user-OptiPlex-380:~$ cd
+user@user-OptiPlex-380:~$ cd
+user@user-OptiPlex-380:~$ cd
+user@user-OptiPlex-380:~$ cd
+user@user-OptiPlex-380:~$ cd home
+bash: cd: home: No such file or directory
+user@user-OptiPlex-380:~$ ls
+a.c~              l8.c~         PrimeArrays1.java~  sai.c~
+a.cpp~            lab~          prime.sh            sample
+add.cpp           lab2.c~       prime.sh~           sample.txt
+add.cpp~          lab31a.c~     prime.sh.save       s.c~
+add.out           lab3.c~       prime.sh.save.1     sheena.c~
+anupam            lab4.cpp~     printprime.sh       srtf.c~
+avg.c~            lab5a.c~      printprime.sh~      Stack.cpp~
+b.cpp~            lab5n1.c~     Public              sv.cpp~
+calc.sh           lab6a.c~      Python-3.5.2        syntax.txt
+calc.sh~          lab73.c~      Python-3.5.2.tgz    t.c~
+c.cpp~            lab7.c~       RadioButtons.java~  temp1.c~
+CheckBoxes.java~  lab8.c~       raka                temp1.l~
+compre.c          labV.c~       rakalisa1           Templates
+compre.c~         lisa          rakalisa2           test3.c~
+Desktop           lisafile.txt  rakalisa3           test4.c~
+dfa.c             local         r.c~                test5.c~
+Documents         modify.cpp~   S2S3_               test9.c~
+Downloads         Music         s2s3_1              testasit.c
+evnodd.sh         oddd.sh       S2S3_1              testasit.c~
+exam.c            oddd.sh.save  S2S3_1,S2S3_2       test.txt
+exam.c~           odd_even.sh   s2s3_2              Test.txt
+factorial.sh      odd_even.sh~  S2S3_2              TEST.txt
+factorial.sh~     odd.sh        s4s5_1              Triangle.java~
+f.cpp~            odd.sh~       s4s5_2              u.c~
+file1.c~          oslab2.c~     s6s7_1              v.cpp~
+h.c~              pal.sh        s6s7_1.txt          Videos
+hello.cpp         pal.sh~       s6s7_2              workspace
+i.c~              Pictures      s6s7_2.txt          xgraph.tcl~
+kickme.c          positive.sh   s6s7_3.txt          yr.c~
+kickme.c~         positive.sh~  s6s7_4.txt
+user@user-OptiPlex-380:~$ cd Do
+bash: cd: Do: No such file or directory
+user@user-OptiPlex-380:~$ cd Documents/
+user@user-OptiPlex-380:~/Documents$ cd Piyush/
+user@user-OptiPlex-380:~/Documents/Piyush$ cd lab13
+user@user-OptiPlex-380:~/Documents/Piyush/lab13$ 
+user@user-OptiPlex-380:~/Documents/Piyush/lab13$ ls
+gdb commands
+user@user-OptiPlex-380:~/Documents/Piyush/lab13$ cd
+user@user-OptiPlex-380:~$ touch .gdbinit
+user@user-OptiPlex-380:~$ cat > .
+Display all 138 possibilities? (y or n)
+user@user-OptiPlex-380:~$ cat > .
+bash: .: Is a directory
+user@user-OptiPlex-380:~$ cat > .gdbinit 
+^C
+user@user-OptiPlex-380:~$ ^C
+user@user-OptiPlex-380:~$ 
+

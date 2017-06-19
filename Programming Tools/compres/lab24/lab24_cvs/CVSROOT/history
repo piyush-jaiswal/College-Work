@@ -1,0 +1,14 @@
+O58eb30a7|user|~/Documents/Piyush/compres/lab24_foobar/*0|foobar||foobar
+O58eb30e1|user|~/Documents/Piyush/compres/lab24_foobar/*0|foobar||foobar
+M58eb36b8|user|~/Documents/Piyush/compres/lab24_foobar|foobar/foo|1.2|x.c
+A58eb3795|user|~/Documents/Piyush/compres/lab24_foobar|foobar/foo|1.1|z
+A58eb3814|user|~/Documents/Piyush/compres/lab24_foo*7|foobar/bar|1.1|a.c
+R58eb3815|user|~/Documents/Piyush/compres/lab24_foo*7|foobar/bar|1.2|y
+R58eb3815|user|~/Documents/Piyush/compres/lab24_foo*7|foobar/bar|1.2|y.c
+F58eb396e|user|~/Documents/Piyush/compres/lab24_foobar/foobar|||foobar
+O58eb3992|user|~/Documents/Piyush/compres/lab24_foobar/*0|foobar|release-1-2|foobar
+F58eb3a09|user|~/Documents/Piyush/compres/lab24_foobar/foobar|||foobar
+O58eb3a28|user|~/Documents/Piyush/compres/lab24_foobar/*0|foobar|release-1-2-fix|foobar
+F58eb3a39|user|~/Documents/Piyush/compres/lab24_foobar/foobar|||foobar
+O58eb3a8b|user|~/Documents/Piyush/compres/lab24_foobar/*0|foobar||foobar
+F58eb3b20|user|~/Documents/Piyush/compres/lab24_foobar/foobar|||foobar

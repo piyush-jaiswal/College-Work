@@ -1,0 +1,850 @@
+ 1	11:41	tcsh /home/user/Documents/Piyush/compres/lab24_cvs init
+     2	11:41	cvs /home/user/Documents/Piyush/compres/lab24_cvs init
+     3	11:42	cvs /home/user/Documents/Piyush/compres/lab24_cvs init
+     4	11:42	cvs -d /home/user/Documents/Piyush/compres/lab24_cvs init
+     5	11:43	setenv CVSROOT /home/user/Documents/Piyush/compres/lab24_cvs
+     6	11:43	pwd
+     7	11:47	cd Documents/Piyush/compres/
+     8	11:47	ls
+     9	11:47	mkdir lab24_sources
+    10	11:47	cd lab24_sources/
+    11	11:49	cd ..
+    12	11:49	rm lab24_sources/
+    13	11:50	cd lab24_foobar
+    14	11:50	mkdir lab24_foobar
+    15	11:50	cd lab24_foobar/
+    16	11:50	ls
+    17	11:50	mkdir foo
+    18	11:50	cd foo
+    19	11:51	touch x.c
+    20	11:51	gedit x.c
+    21	11:53	cd ..
+    22	11:54	cvs import foobar INFN start
+    23	11:54	ls
+    24	11:54	ls
+    25	11:56	cvs import lab24_foobar INFN start
+    26	11:59	pwd
+    27	12:29	ls
+    28	12:29	mkdir bar
+    29	12:29	cd bar
+    30	12:29	touch y.c
+    31	12:30	nohup gedit > /dev/null &
+    32	12:31	nohup gedit y.c > /dev/null &
+    33	12:42	ls
+    34	12:42	cd ..
+    35	12:42	ls
+    36	12:42	cvs import foobar INFN start
+    37	12:43	cvs checkout foobar
+    38	12:44	cvs checkout foobar
+    39	12:46	cvs diff -D now foobar
+    40	12:48	cvs diff -D foobar
+    41	12:48	cvs diff -D now foobar
+    42	12:56	cvs diff -D now foobar
+    43	12:56	cvs diff -D now foobar
+    44	12:56	cvs diff -D now foobar
+    45	12:56	ls
+    46	12:56	cd foobar
+    47	12:56	cvs diff -D now foobar
+    48	12:57	cd ..
+    49	12:57	cvs diff -D now foobar
+    50	13:06	cvs diff -D now foobar
+    51	13:07	cvs update foobar
+    52	13:07	cvs diff -D now foobar
+    53	13:09	cvs commit foobar
+    54	13:09	cvs diff -D now foobar
+    55	13:10	ls
+    56	13:10	cd ..
+    57	13:11	cd lab224_cvs
+    58	13:11	cd lab24_cvs
+    59	13:11	cd foo
+    60	13:11	ls
+    61	13:11	cd foobar/
+    62	13:11	cd foo/
+    63	13:11	touch z
+    64	13:11	cvs add z
+    65	13:11	ls
+    66	13:12	rm z
+    67	13:12	ls
+    68	13:12	cd ..
+    69	13:12	cd ..
+    70	13:12	cd ..
+    71	13:12	cd lab24_foobar/
+    72	13:12	cd foo
+    73	13:12	cd ..
+    74	13:12	cd foobar
+    75	13:12	ls
+    76	13:12	cd foo
+    77	13:12	touch z
+    78	13:12	ls
+    79	13:12	cvs add z
+    80	13:12	cd ..
+    81	13:13	cvs commit foobar
+    82	13:13	cd ..
+    83	13:13	cvs commit foobar/
+    84	13:13	cd foobar/bar
+    85	13:13	ls
+    86	13:13	mv y a
+    87	13:13	ls
+    88	13:14	rm a
+    89	13:14	mv y.c a.c
+    90	13:14	ls
+    91	13:14	cvs remove y
+    92	13:15	cvs remove y.c
+    93	13:15	cvs add a.c
+    94	13:15	cd ../..
+    95	13:15	ls
+    96	13:15	cd commit foobar
+    97	13:15	cvs commit foobar
+    98	13:18	history
+
+
+
+
+
+
+
+
+
+
+
+
+Terminal output:
+
+CVSROOT  foobar
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs> cd foobar/
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs/foobar> cd foo/
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs/foobar/foo> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs/foobar/foo> touch z
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs/foobar/foo> cvs add z
+cvs add: in directory `.':
+cvs [add aborted]: there is no version here; do `cvs checkout' first
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs/foobar/foo> ls
+x.c,v  x.c,v~  x,v  z
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs/foobar/foo> rm z
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs/foobar/foo> ls
+x.c,v  x.c,v~  x,v
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs/foobar/foo> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs/foobar/foo> cd ..
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs/foobar> cd ..
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_cvs> cd ..
+user-OptiPlex-380:~/Documents/Piyush/compres> cd lab
+lab22/        lab23/        lab24_cvs/    lab24_foobar/ 
+user-OptiPlex-380:~/Documents/Piyush/compres> cd lab24_foobar/
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cd foo
+foo/    foobar/ 
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cd foo
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foo> cd ..
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cd foobar
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar> ls
+bar  CVS  foo
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar> cd foo
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/foo> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/foo> touch z
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/foo> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/foo> ls
+CVS  x	x.c  x.c~  z
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/foo> cvs add z
+cvs add: scheduling file `z' for addition
+cvs add: use `cvs commit' to add this file permanently
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/foo> cd ..
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar> cvs commit foobar
+cvs commit: nothing known about `foobar'
+cvs [commit aborted]: correct above errors first!
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar> cd ..
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cvs commit foobar/
+cvs commit: Examining foobar
+cvs commit: Examining foobar/bar
+cvs commit: Examining foobar/foo
+
+Log message unchanged or not specified
+a)bort, c)ontinue, e)dit, !)reuse this message unchanged for remaining dirs
+Action: (continue) 
+/home/user/Documents/Piyush/compres/lab24_cvs/foobar/foo/z,v  <--  foobar/foo/z
+initial revision: 1.1
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cd foobar/bar
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> 
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> ls
+CVS  y	y.c
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> mv y a
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> ls
+a  CVS	y.c
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> rm a
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> mv y.c a.c 
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> ls
+a.c  CVS
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> cvs remove y
+cvs remove: scheduling `y' for removal
+cvs remove: use `cvs commit' to remove this file permanently
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> cvs remove y.c
+cvs remove: scheduling `y.c' for removal
+cvs remove: use `cvs commit' to remove this file permanently
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> cvs add a.c
+cvs add: scheduling file `a.c' for addition
+cvs add: use `cvs commit' to add this file permanently
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar/bar> cd ../..
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> 
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> ls
+bar  foo  foobar
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cd commit foobar
+cd: Too many arguments.
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cvs commit foobar
+cvs commit: Examining foobar
+cvs commit: Examining foobar/bar
+cvs commit: Examining foobar/foo
+
+Log message unchanged or not specified
+a)bort, c)ontinue, e)dit, !)reuse this message unchanged for remaining dirs
+Action: (continue) 
+/home/user/Documents/Piyush/compres/lab24_cvs/foobar/bar/a.c,v  <--  foobar/bar/a.c
+initial revision: 1.1
+/home/user/Documents/Piyush/compres/lab24_cvs/foobar/bar/y,v  <--  foobar/bar/y
+new revision: delete; previous revision: 1.1.1.1
+/home/user/Documents/Piyush/compres/lab24_cvs/foobar/bar/y.c,v  <--  foobar/bar/y.c
+new revision: delete; previous revision: 1.1.1.1
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> 
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cd foo
+foo/    foobar/ 
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cd foobar/
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar> cvs tag -R release-1-2 foobar
+cvs tag: nothing known about foobar
+cvs [tag aborted]: correct the above errors first!
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar/foobar> cd ..
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cvs tag -R release-1-2 foobar
+cvs tag: Tagging foobar
+cvs tag: Tagging foobar/bar
+T foobar/bar/a.c
+cvs tag: Tagging foobar/foo
+T foobar/foo/x
+T foobar/foo/x.c
+T foobar/foo/z
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cvs release -d foobar
+You have [0] altered files in this repository.
+Are you sure you want to release (and delete) directory `foobar': y
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cvs checkout -r release-1-2 foobar
+cvs checkout: Updating foobar
+cvs checkout: Updating foobar/bar
+U foobar/bar/a.c
+cvs checkout: Updating foobar/foo
+U foobar/foo/x
+U foobar/foo/x.c
+U foobar/foo/z
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> ls
+bar  commands  commands~  foo  foobar
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cvs tag -b release 1-2-fix foobar
+cvs tag: cannot open CVS/Entries for reading: No such file or directory
+cvs tag: nothing known about 1-2-fix
+cvs [tag aborted]: correct the above errors first!
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> 
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cvs tag -b release-1-2-fix foobar
+cvs tag: Tagging foobar
+cvs tag: Tagging foobar/bar
+T foobar/bar/a.c
+cvs tag: Tagging foobar/foo
+T foobar/foo/x
+T foobar/foo/x.c
+T foobar/foo/z
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cvs release -d foobar 
+You have [0] altered files in this repository.
+Are you sure you want to release (and delete) directory `foobar': y
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cvs checkout -r release-1-2-fix foobar
+cvs checkout: Updating foobar
+cvs checkout: Updating foobar/bar
+U foobar/bar/a.c
+cvs checkout: Updating foobar/foo
+U foobar/foo/x
+U foobar/foo/x.c
+U foobar/foo/z
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cvs release -d foobar 
+You have [0] altered files in this repository.
+Are you sure you want to release (and delete) directory `foobar': y
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> 
+
+
+
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> cvs log foobar
+cvs log: Logging foobar
+cvs log: Logging foobar/bar
+
+RCS file: /home/user/Documents/Piyush/compres/lab24_cvs/foobar/bar/a.c,v
+Working file: foobar/bar/a.c
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	release-1-2-fix: 1.1.0.2
+	release-1-2: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2017-04-10 13:15:24 +0530;  author: user;  state: Exp;  commitid: 10058EB38131410816E;
+*** empty log message ***
+=============================================================================
+
+RCS file: /home/user/Documents/Piyush/compres/lab24_cvs/foobar/bar/Attic/y,v
+Working file: foobar/bar/y
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	start: 1.1.1.1
+	INFN: 1.1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.2
+date: 2017-04-10 13:15:25 +0530;  author: user;  state: dead;  lines: +0 -0;  commitid: 10058EB38131410816E;
+*** empty log message ***
+----------------------------
+revision 1.1
+date: 2017-04-10 12:42:29 +0530;  author: user;  state: Exp;  commitid: 10058EB305A12E63137;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2017-04-10 12:42:29 +0530;  author: user;  state: Exp;  lines: +0 -0;  commitid: 10058EB305A12E63137;
+
+=============================================================================
+
+RCS file: /home/user/Documents/Piyush/compres/lab24_cvs/foobar/bar/Attic/y.c,v
+Working file: foobar/bar/y.c
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	start: 1.1.1.1
+	INFN: 1.1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.2
+date: 2017-04-10 13:15:25 +0530;  author: user;  state: dead;  lines: +0 -0;  commitid: 10058EB38131410816E;
+*** empty log message ***
+----------------------------
+revision 1.1
+date: 2017-04-10 12:42:29 +0530;  author: user;  state: Exp;  commitid: 10058EB305A12E63137;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2017-04-10 12:42:29 +0530;  author: user;  state: Exp;  lines: +0 -0;  commitid: 10058EB305A12E63137;
+
+=============================================================================
+cvs log: Logging foobar/foo
+
+RCS file: /home/user/Documents/Piyush/compres/lab24_cvs/foobar/foo/x,v
+Working file: foobar/foo/x
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	release-1-2-fix: 1.1.1.1.0.2
+	release-1-2: 1.1.1.1
+	start: 1.1.1.1
+	INFN: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2017-04-10 12:42:29 +0530;  author: user;  state: Exp;  commitid: 10058EB305A12E63137;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2017-04-10 12:42:29 +0530;  author: user;  state: Exp;  lines: +0 -0;  commitid: 10058EB305A12E63137;
+
+=============================================================================
+
+RCS file: /home/user/Documents/Piyush/compres/lab24_cvs/foobar/foo/x.c,v
+Working file: foobar/foo/x.c
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	release-1-2-fix: 1.2.0.2
+	release-1-2: 1.2
+	start: 1.1.1.1
+	INFN: 1.1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.2
+date: 2017-04-10 13:09:36 +0530;  author: user;  state: Exp;  lines: +1 -1;  commitid: 10058EB36B513F574EF;
+*** empty log message ***
+----------------------------
+revision 1.1
+date: 2017-04-10 12:42:29 +0530;  author: user;  state: Exp;  commitid: 10058EB305A12E63137;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2017-04-10 12:42:29 +0530;  author: user;  state: Exp;  lines: +0 -0;  commitid: 10058EB305A12E63137;
+
+=============================================================================
+
+RCS file: /home/user/Documents/Piyush/compres/lab24_cvs/foobar/foo/z,v
+Working file: foobar/foo/z
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	release-1-2-fix: 1.1.0.2
+	release-1-2: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2017-04-10 13:13:17 +0530;  author: user;  state: Exp;  commitid: 10058EB379214048BD5;
+*** empty log message ***
+=============================================================================
+user-OptiPlex-380:~/Documents/Piyush/compres/lab24_foobar> 
+
+

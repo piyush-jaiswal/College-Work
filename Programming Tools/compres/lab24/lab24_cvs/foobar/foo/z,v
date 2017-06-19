@@ -1,0 +1,26 @@
+head	1.1;
+access;
+symbols
+	release-1-2-fix:1.1.0.2
+	release-1-2:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2017.04.10.07.43.17;	author user;	state Exp;
+branches;
+next	;
+commitid	10058EB379214048BD5;
+
+
+desc
+@@
+
+
+1.1
+log
+@*** empty log message ***
+@
+text
+@@

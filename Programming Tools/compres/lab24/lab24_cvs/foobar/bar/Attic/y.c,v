@@ -1,0 +1,85 @@
+head	1.2;
+access;
+symbols
+	start:1.1.1.1 INFN:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	2017.04.10.07.45.25;	author user;	state dead;
+branches;
+next	1.1;
+commitid	10058EB38131410816E;
+
+1.1
+date	2017.04.10.07.12.29;	author user;	state Exp;
+branches
+	1.1.1.1;
+next	;
+commitid	10058EB305A12E63137;
+
+1.1.1.1
+date	2017.04.10.07.12.29;	author user;	state Exp;
+branches;
+next	;
+commitid	10058EB305A12E63137;
+
+
+desc
+@@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@#include <stdio.h>
+#include <time.h>
+#define NUM_RANGE 10000
+
+
+int reverse(int n)
+{
+	int rev = 0;
+	
+	while(n > 0)
+	{
+		rev = rev * 10 + n % 10;
+		n /= 10;
+	}
+	return rev;
+}
+
+
+int main()
+{
+	int n, reversed;
+	
+	srand(time(NULL));
+	n = rand() % NUM_RANGE;
+	reversed = reverse(n);
+	
+	printf("No. genarated = %d\n", n);
+	printf("Reverse = %d\n", reversed);
+	
+	return 0;
+}
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

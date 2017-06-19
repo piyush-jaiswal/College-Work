@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="xml_practice" default="Create">
+	<target name="Create" depends="Delete">
+		<mkdir dir="./src" />
+		<mkdir dir="./src2" />
+		<copy todir="./src">
+		<fileset file="./test.java" />
+		</copy>
+	</target>
+	
+	<target name="Delete">
+		<delete dir="./src" />
+		<delete dir="./src2" />
+	</target>
+	
+	<target name="Copy">
+		<copy todir="./src2">
+		<fileset dir="./src" />
+		</copy>
+	</target>
+	
+	<target name="Compile">
+		<mkdir dir="./Staging" />
+		<javac includeantruntime="false" srcdir="./src" destdir="./Staging" />
+	</target>
+	
+	<target name="Run" depends="Compile">
+		<java classname="test">
+			<classpath path="Staging" />
+		</java>
+	</target>
+</project>
