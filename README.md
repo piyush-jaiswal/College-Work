@@ -1,2 +1,2 @@
 # College-Work
-Undergraduate course assignments.
+Undergraduate course assignments for B.Tech CSE.
